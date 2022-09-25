@@ -127,12 +127,12 @@ body * {
 
     .title {
       color: var(--theme-color);
-      font-size: --font-extra-large;
+      font-size: var(--font-extra-large);
       font-weight: bold;
     }
 
     .subtitle {
-      font-size: --font-large;
+      font-size: var(--font-large);
       line-height: 1.35;
       padding-top: 4px;
     }
@@ -157,7 +157,7 @@ body * {
     bottom: 0;
     color: var(--theme-color);
     display: flex;
-    font-size: --font-medium;
+    font-size: var(--font-medium);
     font-weight: bold;
     flex-flow: column nowrap;
     height: 40px;
@@ -204,7 +204,7 @@ body * {
     border-right: none;
     color: var(--theme-color);
     display: block;
-    font-size: --font-medium;
+    font-size: var(--font-medium);
     left: -100px;
     margin: 0 0 5px auto;
     padding: 6px 20px 6px 12px;
@@ -244,7 +244,7 @@ body * {
 
     legend {
       display: none;
-      font-size: --font-large;
+      font-size: var(--font-large);
       padding: 0 12px;
 
       @media (min-width: 769px) {
@@ -264,7 +264,7 @@ body * {
         box-shadow: 4px 4px 0 var(--theme-color);
         color: var(--theme-color);
         display: flex;
-        font-size: --font-large;
+        font-size: var(--font-large);
         flex-flow: row nowrap;
         height: 45px;
         margin: 0 15px 15px 0;
@@ -274,7 +274,7 @@ body * {
         width: 100%;
 
         @media (min-width: 769px) {
-          font-size: --font-medium;
+          font-size: var(--font-medium);
           height: 30px;
           width: auto;
         }
