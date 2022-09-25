@@ -1,6 +1,6 @@
 <script>
 	import { onDestroy, onMount } from "svelte";
-	import Greetings from "$lib/greetings.svelte";
+	import Greetings from "$lib/Greetings.svelte";
 
 	let animation = true;
 	let innerWidth = 0;
