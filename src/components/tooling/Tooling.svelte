@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { filterItems, devIcons } from "$lib/tooling/data";
-	import type { Filters } from "../../types";
+	import { filterItems, devIcons } from "./data";
+	import type { Filters } from "$lib/types";
 
 	let themeColor = "#2962ff";
 	let white = "#fff";

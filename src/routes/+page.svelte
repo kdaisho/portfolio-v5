@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Header from "$lib/Header.svelte";
-	import Work from "$lib/Work.svelte";
-	import Hero from "$lib/Hero.svelte";
-	import Tooling from "$lib/tooling/Tooling.svelte";
-	import type { Filters } from "../types";
+	import Header from "../components/Header.svelte";
+	import Work from "../components/Work.svelte";
+	import Hero from "../components/hero/Hero.svelte";
+	import Tooling from "../components/tooling/Tooling.svelte";
+	import type { Filters } from "$lib/types";
 
 	const handleFilterChange = ({ checked, value, filterTerms }: Filters) => {
 		checked ? filterTerms.delete(value) : filterTerms.add(value);

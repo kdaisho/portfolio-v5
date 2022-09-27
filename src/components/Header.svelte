@@ -99,19 +99,6 @@
 						outline: none;
 					}
 				}
-
-				svg {
-					// transform: scale(0.4);
-					// transform-origin: top left;
-
-					@media (min-width: 769px) {
-						transform: scale(0.5);
-					}
-				}
-
-				path {
-					fill: #fff;
-				}
 			}
 
 			.nav-right {
@@ -209,11 +196,6 @@
 					transition: right 0.15s ease-out;
 					width: 100%;
 
-					&.active {
-						right: 0;
-						z-index: 100;
-					}
-
 					@media (min-width: 769px) {
 						border: none;
 						display: flex;
@@ -225,12 +207,6 @@
 						max-width: none;
 						position: initial;
 						width: 100%;
-
-						label {
-							&:hover {
-								cursor: pointer;
-							}
-						}
 					}
 
 					.is-menu-item {
@@ -250,11 +226,6 @@
 							height: 40px;
 							margin: 0 6px;
 							transition: translate 0.05s ease-in box-shadow 0.05s ease-in;
-
-							&.active {
-								box-shadow: 0 0 0 var(--theme-color);
-								transform: translate(4px, 4px);
-							}
 						}
 					}
 				}
@@ -275,11 +246,6 @@
 								height: 40px;
 								margin: 0 6px;
 								transition: translate 0.05s ease-in box-shadow 0.05s ease-in;
-
-								&.active {
-									box-shadow: 0 0 0 var(--theme-color);
-									transform: translate(4px, 4px);
-								}
 							}
 						}
 					}
