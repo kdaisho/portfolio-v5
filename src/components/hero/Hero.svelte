@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onDestroy, onMount } from "svelte";
 	import Greetings from "./greetings/Greetings.svelte";
 
@@ -33,4 +33,4 @@
 	</div>
 </section>
 
-<style src="./styles.scss"></style>
+<style src="./styles.css"></style>

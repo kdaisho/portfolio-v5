@@ -1,23 +1,5 @@
 .greetings-wrap {
 	padding-top: 25px;
-
-	@media (min-width: 769px) {
-		padding-top: 0;
-		position: absolute;
-		&.slide {
-			animation: 0.75s 3.25s 1 slideTextIn forwards;
-			opacity: 0;
-		}
-		top: 0;
-	}
-	@media (min-width: 1024px) {
-		width: 500px;
-	}
-
-	.greetings {
-		font-size: var(--font-large);
-		line-height: 1.35;
-	}
 }
 
 .clip-path {
@@ -37,8 +19,33 @@
 		49.47% 0.26%
 	);
 	width: 320px;
-	@media (min-width: 769px) {
+}
+
+@media (min-width: 769px) {
+	.greetings-wrap {
+		padding-top: 0;
+		position: absolute;
+		top: 0;
+	}
+
+	.greetings-wrap.slide {
+		animation: 0.75s 3.25s 1 slideTextIn forwards;
+		opacity: 0;
+	}
+
+	.greetings {
+		font-size: var(--font-large);
+		line-height: 1.35;
+	}
+
+	.clip-path {
 		display: block;
+	}
+}
+
+@media (min-width: 1024px) {
+	.greetings-wrap {
+		width: 500px;
 	}
 }
 

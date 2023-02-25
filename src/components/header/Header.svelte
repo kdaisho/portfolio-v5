@@ -39,10 +39,10 @@
 				<img src="/nav/menu-dots.svg" alt="open menu" />
 			</button>
 			<div class="menu-pane">
-				<button class="button has-shadow is-menu-item">Work Log</button>
-				<button class="button has-shadow is-menu-item">Tooling</button>
-				<button class="button has-shadow is-menu-item">Side Projects</button>
-				<button class="button has-shadow is-menu-item">Contact</button>
+				<button class="button has-shadow menu-item">Work Log</button>
+				<button class="button has-shadow menu-item">Tooling</button>
+				<button class="button has-shadow menu-item">Side Projects</button>
+				<button class="button has-shadow menu-item">Contact</button>
 				<div class="theme-button">
 					<button>🌙</button>
 				</div>
@@ -51,4 +51,4 @@
 	</div>
 </header>
 
-<style src="./styles.scss"></style>
+<style src="./styles.css"></style>

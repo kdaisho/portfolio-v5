@@ -11,4 +11,4 @@
 	</p>
 </div>
 
-<style src="./styles.scss"></style>
+<style src="./styles.css"></style>
