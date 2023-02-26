@@ -123,7 +123,6 @@ a {
 
 .menu-pane .menu-item {
 	box-shadow: none;
-	border-width: 0 0 4px 0;
 	font-size: 18px;
 	height: 70px;
 	margin: 0;
@@ -184,23 +183,24 @@ a {
 	}
 
 	.menu-pane .menu-item {
-		border: 3px solid var(--theme-color-darken);
-		box-shadow: 4px 4px 0 var(--theme-color-darken);
+		/* border: 3px solid var(--theme-color-darken); */
+		/* box-shadow: 4px 4px 0 var(--theme-color-darken); */
+		box-shadow: 3px 3px 0 var(--theme-color-darken);
 		color: var(--theme-color-darken);
 		font-size: var(--font-medium);
 		height: 40px;
-		margin: 0 6px;
 		transition: translate 0.05s ease-in box-shadow 0.05s ease-in;
 	}
 
 	.menu-pane .menu-item.active {
-		box-shadow: 0 0 0 var(--theme-color);
-		transform: translate(4px, 4px);
+		/* box-shadow: 0 0 0 var(--theme-color);
+		transform: translate(4px, 4px); */
 	}
 
 	.menu-pane .indicator-wrapper {
 		display: flex;
 		flex-flow: row nowrap;
+		gap: var(--gap);
 		position: relative;
 	}
 
@@ -211,21 +211,21 @@ a {
 		height: 6px;
 		left: 0;
 		position: absolute;
-		transition: transform 0.15s ease-in;
+		transition: transform 0.25s ease-in-out;
 		transform: translateX(20px);
-		width: 30px;
+		width: var(--cursor-width);
 	}
 
 	.menu-pane .indicator.work-log {
-		transform: translateX(48px);
+		transform: translateX(var(--offset));
 	}
 
 	.menu-pane .indicator.tooling {
-		transform: translateX(calc(160px));
+		transform: translateX(var(--offset));
 	}
 
 	.menu-pane .indicator.projects {
-		transform: translateX(calc(286px));
+		transform: translateX(var(--offset));
 	}
 
 	.header.dark .nav .nav-right .menu-pane .menu-item {
