@@ -17,25 +17,23 @@
 		if (!ref) return
 		const el = document.querySelector(ref)
 		if (!el) return
-		button.classList.add("action")
-		setTimeout(() => button.classList.remove("action"), 150)
+		button.classList.add("active")
 		el.scrollIntoView({ behavior: "smooth" })
 	}
 
 	const callback = (entries: IntersectionObserverEntry[]) => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
-				console.log(
-					"======================== IntersectionObserver ========================",
-					entry.target.id
-				)
 				inView = entry.target.id
 			}
 		})
 	}
 
 	onMount(() => {
-		const observer = new IntersectionObserver(callback, { root: null, rootMargin: "-45% 0px -55%" })
+		const observer = new IntersectionObserver(callback, {
+			rootMargin: "-45% 0px -55%" // tested hundred times, -45%,-55% is the best so far
+		})
+
 		document.querySelectorAll(".scroll-to").forEach(el => {
 			observer.observe(el)
 		})
@@ -79,28 +77,33 @@
 				<img src={openPane ? menuClose : menuDots} alt="toggle menu" />
 			</button>
 			<div class="menu-pane">
-				<button
-					class="button has-shadow menu-item"
-					class:active={inView === "work"}
-					class:action={inView === "work"}
-					data-ref="#work-log"
-					on:click={scrollTo}>Work Log</button
-				>
-				<button
-					class="button has-shadow menu-item"
-					class:active={inView === "tooling"}
-					data-ref="#tooling"
-					on:click={scrollTo}>Tooling</button
-				>
-				<button class="button has-shadow menu-item" data-ref="#projects" on:click={scrollTo}
-					>Side Projects</button
-				>
-				<button
-					class="button has-shadow menu-item"
-					class:active={inView === "contact"}
-					data-ref="#contact"
-					on:click={scrollTo}>Contact</button
-				>
+				<div class="indicator-wrapper">
+					<button
+						class="button has-shadow menu-item"
+						class:active={inView === "work-log"}
+						data-ref="#work-log"
+						on:click={scrollTo}>Work Log</button
+					>
+					<button
+						class="button has-shadow menu-item"
+						class:active={inView === "tooling"}
+						data-ref="#tooling"
+						on:click={scrollTo}>Tooling</button
+					>
+					<button
+						class="button has-shadow menu-item"
+						class:active={inView === "projects"}
+						data-ref="#projects"
+						on:click={scrollTo}>Side Projects</button
+					>
+					<button
+						class="button has-shadow menu-item"
+						class:active={inView === "contact"}
+						data-ref="#contact"
+						on:click={scrollTo}>Contact</button
+					>
+					<div class="indicator {inView}" />
+				</div>
 				<div class="theme-button">
 					<button>🌙</button>
 				</div>

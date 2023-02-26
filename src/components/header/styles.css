@@ -193,6 +193,41 @@ a {
 		transition: translate 0.05s ease-in box-shadow 0.05s ease-in;
 	}
 
+	.menu-pane .menu-item.active {
+		box-shadow: 0 0 0 var(--theme-color);
+		transform: translate(4px, 4px);
+	}
+
+	.menu-pane .indicator-wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		position: relative;
+	}
+
+	.menu-pane .indicator {
+		background: #fff;
+		bottom: -10px;
+		border-radius: 4px;
+		height: 6px;
+		left: 0;
+		position: absolute;
+		transition: transform 0.15s ease-in;
+		transform: translateX(20px);
+		width: 30px;
+	}
+
+	.menu-pane .indicator.work-log {
+		transform: translateX(48px);
+	}
+
+	.menu-pane .indicator.tooling {
+		transform: translateX(calc(160px));
+	}
+
+	.menu-pane .indicator.projects {
+		transform: translateX(calc(286px));
+	}
+
 	.header.dark .nav .nav-right .menu-pane .menu-item {
 		background: var(--theme-color);
 		border: 3px solid #fff;
