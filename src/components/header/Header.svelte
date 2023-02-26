@@ -1,5 +1,11 @@
-<script>
-	let openPane = false;
+<script lang="ts">
+	import logo from "$assets/nav/logo.svg"
+	import linkedin from "$assets/nav/linkedin.svg"
+	import github from "$assets/nav/github.svg"
+	import menuDots from "$assets/nav/menu-dots.svg"
+	import menuClose from "$assets/nav/menu-close.svg"
+
+	let openPane = false
 </script>
 
 <header
@@ -11,7 +17,7 @@
 >
 	<div class="content-wrap nav">
 		<div class="nav-left">
-			<button class="logo"><img src="/nav/logo.svg" alt="logo" /></button>
+			<button class="logo"><img src={logo} alt="logo" /></button>
 		</div>
 		<div id="navRight" class="nav-right">
 			<ul class="social-links">
@@ -22,7 +28,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="/nav/linkedin.svg" alt="linkedin" />
+						<img src={linkedin} alt="linkedin" />
 					</a>
 				</li>
 				<li class="social-each">
@@ -31,12 +37,12 @@
 						title="github"
 						target="_blank"
 						rel="noopener noreferrer"
-						><img src="/nav/github.svg" alt="github" />
+						><img src={github} alt="github" />
 					</a>
 				</li>
 			</ul>
-			<button class="menu-toggle outline-button">
-				<img src="/nav/menu-dots.svg" alt="open menu" />
+			<button class="menu-toggle outline-button" on:click={() => console.log("click menu toggler")}>
+				<img src={openPane ? menuClose : menuDots} alt="toggle menu" />
 			</button>
 			<div class="menu-pane">
 				<button class="button has-shadow menu-item">Work Log</button>
