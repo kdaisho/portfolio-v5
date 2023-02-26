@@ -11,3 +11,12 @@
 <Work />
 <Tooling />
 <Projects />
+<div class="empty">Empty</div>
+
+<style>
+	.empty {
+		background: salmon;
+		height: 1500px;
+		width: 100%;
+	}
+</style>

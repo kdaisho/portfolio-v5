@@ -204,3 +204,8 @@ a {
 		transition: translate 0.05s ease-in box-shadow 0.05s ease-in;
 	}
 }
+
+.menu-pane .menu-item:global(.action) {
+	box-shadow: 0 0 0 var(--theme-color);
+	transform: translate(4px, 4px);
+}

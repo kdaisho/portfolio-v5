@@ -4,8 +4,42 @@
 	import github from "$assets/nav/github.svg"
 	import menuDots from "$assets/nav/menu-dots.svg"
 	import menuClose from "$assets/nav/menu-close.svg"
+	import { onMount } from "svelte"
 
 	let openPane = false
+	let inView = ""
+
+	const scrollTo = (event: Event) => {
+		event.preventDefault()
+		const button = event.target
+		if (!(button instanceof HTMLElement)) return
+		const ref = button.dataset.ref
+		if (!ref) return
+		const el = document.querySelector(ref)
+		if (!el) return
+		button.classList.add("action")
+		setTimeout(() => button.classList.remove("action"), 150)
+		el.scrollIntoView({ behavior: "smooth" })
+	}
+
+	const callback = (entries: IntersectionObserverEntry[]) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				console.log(
+					"======================== IntersectionObserver ========================",
+					entry.target.id
+				)
+				inView = entry.target.id
+			}
+		})
+	}
+
+	onMount(() => {
+		const observer = new IntersectionObserver(callback, { root: null, rootMargin: "-45% 0px -55%" })
+		document.querySelectorAll(".scroll-to").forEach(el => {
+			observer.observe(el)
+		})
+	})
 </script>
 
 <header
@@ -45,10 +79,28 @@
 				<img src={openPane ? menuClose : menuDots} alt="toggle menu" />
 			</button>
 			<div class="menu-pane">
-				<button class="button has-shadow menu-item">Work Log</button>
-				<button class="button has-shadow menu-item">Tooling</button>
-				<button class="button has-shadow menu-item">Side Projects</button>
-				<button class="button has-shadow menu-item">Contact</button>
+				<button
+					class="button has-shadow menu-item"
+					class:active={inView === "work"}
+					class:action={inView === "work"}
+					data-ref="#work-log"
+					on:click={scrollTo}>Work Log</button
+				>
+				<button
+					class="button has-shadow menu-item"
+					class:active={inView === "tooling"}
+					data-ref="#tooling"
+					on:click={scrollTo}>Tooling</button
+				>
+				<button class="button has-shadow menu-item" data-ref="#projects" on:click={scrollTo}
+					>Side Projects</button
+				>
+				<button
+					class="button has-shadow menu-item"
+					class:active={inView === "contact"}
+					data-ref="#contact"
+					on:click={scrollTo}>Contact</button
+				>
 				<div class="theme-button">
 					<button>🌙</button>
 				</div>

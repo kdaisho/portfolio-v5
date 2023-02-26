@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { projects, filterItems } from "./data";
+	import { projects, filterItems } from "./data"
 </script>
 
-<div class="content-wrap is-side-by-side">
+<div id="projects" class="content-wrap is-side-by-side scroll-to">
 	<div class="right-side">
 		<div class="title-group has-filters">
 			<h2 class="title">Side Projects</h2>
