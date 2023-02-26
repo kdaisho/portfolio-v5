@@ -133,6 +133,10 @@
 					}
 				}
 
+				svg {
+					width: 75px;
+				}
+
 				.separator {
 					display: block;
 					border-bottom: 2px solid var(--theme-color);
@@ -156,5 +160,17 @@
 				}
 			}
 		}
+	}
+
+	.tool:hover :global(path.white) {
+		fill: var(--theme-color);
+	}
+
+	.dark.is-tooling .tooling .tool :global(path.white) {
+		fill: #000;
+	}
+
+	.dark.is-tooling .tooling .tool:hover :global(path.white) {
+		fill: var(--theme-color);
 	}
 </style>
