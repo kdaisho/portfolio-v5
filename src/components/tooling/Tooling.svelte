@@ -1,15 +1,23 @@
 <script lang="ts">
-	import { filterItems, devIcons } from "./data";
-	import type { Filters } from "$lib/types";
+	import { crossfade } from "svelte/transition"
+	import { flip } from "svelte/animate"
+	import { filterItems, devIcons } from "./data"
+	import { FLIP_DURATION } from "$lib/constatns"
 
-	let themeColor = "#2962ff";
-	let white = "#fff";
-	let openPage: string;
-	const filterTerms = new Set<number>();
+	const themeColor = "#2962ff"
+	const white = "#fff"
+	const filterTerms = new Set<number>()
+	let openPane: string
+	let _devIcons = devIcons
 
-	const getStars = (num: number) => Array(num).fill("★").join("");
+	const getStars = (num: number) => Array(num).fill("★").join("")
 
-	export let handleFilterChange: (args: Filters) => void;
+	const handleFilterChange = (checked: boolean, value: number) => {
+		checked ? filterTerms.delete(value) : filterTerms.add(value)
+		_devIcons = devIcons
+	}
+
+	const [send, receive] = crossfade({})
 </script>
 
 <section id="toTooling" class="section is-tooling bright">
@@ -22,20 +30,15 @@
 					reviewing.
 				</p>
 			</div>
-			<fieldset class="filter-section" class:active={openPage === "tool"}>
+			<fieldset class="filter-section" class:active={openPane === "tool"}>
 				<button class="toggle-filter outline-button">Filters</button><legend>(OR) Filters</legend>
 				<div class="filters">
 					{#each filterItems as item}
 						<label
 							class="tag"
 							class:active={filterTerms.has(item.stars)}
-							on:click={() => {
-								handleFilterChange({
-									checked: item.checked,
-									value: item.stars,
-									filterTerms
-								});
-							}}
+							on:keydown
+							on:click={() => handleFilterChange(item.checked, item.stars)}
 						>
 							<input type="checkbox" name={item.name} bind:checked={item.checked} />
 							<span class="dummy" />
@@ -46,9 +49,15 @@
 			</fieldset>
 		</div>
 		<div class="tooling right-side">
-			{#each devIcons as icon}
+			{#each _devIcons.filter(icon => {
+				if (!filterTerms.size) return true
+				return filterTerms.has(icon.stars)
+			}) as icon (icon.name)}
 				<div
 					class="tool"
+					in:send={{ key: icon.name }}
+					out:receive={{ key: icon.name }}
+					animate:flip={{ duration: FLIP_DURATION }}
 					on:mouseenter={() => (icon.color = white)}
 					on:mouseleave={() => (icon.color = themeColor)}
 				>
