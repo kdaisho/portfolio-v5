@@ -32,8 +32,8 @@
 			<div class="title-group has-filters">
 				<h2 class="title">Tooling</h2>
 				<p class="subtitle font-large">
-					Enthusiastic about JavaScript, TypeScript, Nodejs, Jest. I enjoy both writing and
-					reviewing.
+					I'm passionate about JavaScript, TypeScript, Node.js, and unit testing, and take great
+					pleasure in both writing and reviewing code related to these technologies.
 				</p>
 			</div>
 			<fieldset class="filter-section" class:active={openPane === "tool"}>

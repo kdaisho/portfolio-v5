@@ -3,8 +3,8 @@
 		<div class="title-group">
 			<h2 class="title">Work Log</h2>
 			<p class="subtitle font-large">
-				I've learned processes and best practices it takes to be an effective developer while
-				working in these great teams.
+				I've gained valuable experience in process and best practices of effective software
+				development while working with these great teams.
 			</p>
 		</div>
 		<div class="cards">

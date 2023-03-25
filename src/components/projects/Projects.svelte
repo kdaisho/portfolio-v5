@@ -40,8 +40,8 @@
 			<div class="title-group has-filters">
 				<h2 class="title">Side Projects</h2>
 				<p class="subtitle font-large">
-					Getting my hands dirty with technologies I don't have a chance to work within my day job
-					helps me stay up to date.
+					I believe in the importance of continuous learning and development, and experimenting with
+					new technologies outside of my day job is a great way to achieve that.
 				</p>
 			</div>
 			<fieldset class="filter-section">
