@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fly } from "svelte/transition"
 	import { filterItems, projects } from "./data"
 	import type { Project } from "$lib/types"
 	import Modal from "../modal/Modal.svelte"
@@ -76,6 +77,7 @@
 					on:keypress
 					role="button"
 					tabIndex={0}
+					in:fly={{ y: 200, duration: 200 }}
 				>
 					<div
 						class="top"

@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { fade } from "svelte/transition"
+
 	export let hideProject: () => void
 </script>
 
-<div class="modal" on:click={hideProject} on:keypress role="button">
+<div class="modal" on:click={hideProject} on:keypress role="button" out:fade={{ duration: 200 }}>
 	<slot />
 </div>
 
