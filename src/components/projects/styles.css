@@ -58,7 +58,8 @@
 	position: relative;
 }
 
-.glass:is(:before, :after) {
+.glass:before,
+.glass:after {
 	content: "";
 	background: rgba(255, 255, 255, 0.75);
 	display: block;
