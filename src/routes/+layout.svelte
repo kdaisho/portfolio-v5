@@ -1,24 +1,24 @@
 <svelte:head>
-	<meta name="description" content="Daisho | Software Development Engineer" />
+	<meta name="description" content="Daisho | Software Developer" />
 	<meta
 		name="keywords"
-		content="Software development engineer, front-end developer, javascript, css, html, react, nodejs, gatsby, nextjs"
+		content="Montreal, Canada, Japanese, software developer, front-end developer, javascript, typescript, css, html, svelte, sveltekit, react, deno.js, node.js, gatsby, next.js"
 	/>
 	<meta name="author" content="Daisho Komiyama" />
-	<meta property="og:title" content="Daisho | Software Development Engineer" />
-	<meta property="og:site_name" content="Daisho | Software Development Engineer" />
+	<meta property="og:title" content="Daisho | Software Developer" />
+	<meta property="og:site_name" content="Daisho | Software Developer" />
 	<meta property="og:url" content="https://daishodesign.com/" />
 	<meta property="og:type" content="website" />
 	<meta
 		property="og:description"
-		content="Enthusiastic about JavaScript, TypeScript, Nodejs, CSS enjoying both writing and reviewing. I started in 2014 and have been passionate about what I do; the problems I face; I love my work."
+		content="As a software developer, I am passionate about the power of JavaScript, TypeScript, and Node.js to solve complex problems and create impactful solutions. With over 8 years of experience, I enjoy both writing and reviewing code, and take pride in delivering high-quality, performant applications. Since starting in 2014, I have remained enthusiastic about my work and the challenges it presents."
 	/>
 	<meta
 		property="og:image"
 		content="https://res.cloudinary.com/de9x7yfyb/image/upload/v1644639143/daishodesign/highlights-en_t6d8r3.jpg"
 	/>
 	<meta property="og:image:width" content="400" />
-	<title>Daisho | SDE</title>
+	<title>Daisho | Software Developer</title>
 	<link rel="canonical" href="https://daishodesign.com/" />
 </svelte:head>
 

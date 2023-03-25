@@ -3,6 +3,8 @@
 	import { filterItems, projects } from "./data"
 	import type { Project } from "$lib/types"
 	import Modal from "../modal/Modal.svelte"
+	import DesktopIcon from "$assets/projects/desktop-icon.svelte"
+	import GithubIcon from "$assets/projects/github-icon.svelte"
 
 	let selectedProject: Project | null
 	let activeCardId: number | null
@@ -117,7 +119,8 @@
 										class="link is-desktop-icon"
 										target="_blank"
 										rel="noopener noreferrer"
-										>{"icon: Desktop()"} Visit The Website
+									>
+										<DesktopIcon /> Visit The Website
 									</a>
 								{/if}
 								{#if selectedProject.githubUrl}
@@ -128,7 +131,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										{"icon: Github()"}View Github Repo
+										<GithubIcon /> View Source Code
 									</a>
 								{/if}
 							</div>

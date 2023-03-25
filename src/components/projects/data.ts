@@ -35,8 +35,8 @@ export const projects: Project[] = [
 	},
 	{
 		id: 1,
-		title: "Portofolio",
-		subtitle: "My portofolio",
+		title: "Portfolio",
+		subtitle: "Crafting modern web experiences with SvelteKit",
 		description:
 			"My portfolio website is an impressive display of my capabilities as a skilled professional, designed to showcase my talents and experience. It is built using SvelteKit, an advanced framework that provides exceptional speed, performance, and flexibility.",
 		stack: ["svelte", "nodejs", "live"],
@@ -48,7 +48,7 @@ export const projects: Project[] = [
 	{
 		id: 2,
 		title: "Quebec3",
-		subtitle: "Blog",
+		subtitle: "A fast and responsive blog powered by a static site generator",
 		description:
 			"Quebec3 is a blog constructed with Gatsby, a highly efficient static site generator renowned for its lightning-fast performance and minimalistic design. With its streamlined architecture, Quebec3 offers readers an exceptional browsing experience that is both quick and intuitive.",
 		stack: ["gatsby", "react", "graphql", "live"],

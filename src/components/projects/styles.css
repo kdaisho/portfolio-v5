@@ -189,29 +189,25 @@
 	flex: 0 0 100%;
 }
 
-.project-details .link path {
-	transition: fill 0.1s linear;
-}
-
 .project-details .link:hover {
 	background: var(--theme-color);
 	color: #fff;
 	cursor: pointer;
 }
 
-.project-details .link:hover path {
+.project-details .link:hover :global(path) {
 	fill: #fff;
 }
 
-.project-details .link svg {
+.project-details .link :global(svg) {
 	margin-right: 9px;
 }
 
-.project-details .link.is-desktop-icon svg {
+.project-details .link.is-desktop-icon :global(svg) {
 	width: 18px;
 }
 
-.project-details .link.is-github-icon svg {
+.project-details .link.is-github-icon :global(svg) {
 	width: 22px;
 }
 
