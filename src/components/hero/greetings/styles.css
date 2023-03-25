@@ -35,7 +35,6 @@
 
 	.greetings {
 		font-size: var(--font-large);
-		line-height: 1.35;
 	}
 
 	.clip-path {

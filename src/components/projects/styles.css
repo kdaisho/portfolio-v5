@@ -26,7 +26,7 @@
 	flex-flow: column nowrap;
 	margin: 12px;
 	max-width: 350px;
-	transition: box-shadow 0.05s ease-out 0.1s, transform 0.05s ease-out 0.1s;
+	transition: box-shadow 0.05s ease-out 0.15s, transform 0.05s ease-out 0.15s;
 	width: 100%;
 }
 
@@ -119,7 +119,7 @@
 .project-details {
 	background: #fff;
 	display: none;
-	max-width: 604px;
+	max-width: 660px;
 	width: 100%;
 }
 

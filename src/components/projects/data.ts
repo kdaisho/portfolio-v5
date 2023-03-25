@@ -26,7 +26,7 @@ export const projects: Project[] = [
 		title: "JavaScriptBest",
 		subtitle: "Online Course Review App",
 		description:
-			"JavaScriptBest can keep your overviews of favourite online couses in one place. Built with only JavaScript from UI to backend while providing great performance thanks to nginx.",
+			"JavaScriptBest is a powerful tool that enables you to centralize all of your favorite online courses in a single location. This innovative platform is built entirely using JavaScript, from the user interface to the backend, and optimized for outstanding performance.",
 		stack: ["nodejs", "handlebars", "sass", "mongodb"],
 		hero: jsbestHero,
 		thumb: jsbestThumb,
@@ -38,8 +38,8 @@ export const projects: Project[] = [
 		title: "Portofolio",
 		subtitle: "My portofolio",
 		description:
-			"A showcase of what I do and I'm good at. Built with React for UI and Nodejs for mail service. No scaffolding from create-react-app.",
-		stack: ["react", "nodejs", "live", "less"],
+			"My portfolio website is an impressive display of my capabilities as a skilled professional, designed to showcase my talents and experience. It is built using SvelteKit, an advanced framework that provides exceptional speed, performance, and flexibility.",
+		stack: ["svelte", "nodejs", "live"],
 		hero: portfolioHero,
 		thumb: portfolioThumb,
 		url: "https://daishodesign.com",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
 		title: "Quebec3",
 		subtitle: "Blog",
 		description:
-			"Quebec3 is a blog built with Gatsby: a static site generator. Super light, super fast.",
+			"Quebec3 is a blog constructed with Gatsby, a highly efficient static site generator renowned for its lightning-fast performance and minimalistic design. With its streamlined architecture, Quebec3 offers readers an exceptional browsing experience that is both quick and intuitive.",
 		stack: ["gatsby", "react", "graphql", "live"],
 		hero: qc3Hero,
 		thumb: qc3Thumb,
@@ -59,10 +59,10 @@ export const projects: Project[] = [
 	},
 	{
 		id: 3,
-		title: "My Brailler",
-		subtitle: "Electronic braille typewriter",
+		title: "Virtual Braille Typewriter",
+		subtitle: "Braille typewriting application ",
 		description:
-			"My Brailler is a training application for the visually impaired who uses Perkins brailler. Traditional Perkins brailler can't tell the user when they make a typo. My Brailler does as it speaks!",
+			"The Virtual Braille Typewriter serves as a valuable training tool for individuals with visual impairments who are beginning to use the Perkins brailler. Unlike the traditional Perkins brailler, which does not provide feedback on typographical errors, this innovative device is equipped with a speech function that announces mistakes as they occur",
 		stack: ["angular"],
 		hero: mybraillerHero,
 		thumb: mybraillerThumb,
@@ -74,7 +74,7 @@ export const projects: Project[] = [
 		title: "Email Builder",
 		subtitle: "HTML email builder for someone busy",
 		description:
-			"Once I worked for a company that required me to do many HTML emails and website updates. Building emails was easy, but it was redundant and time-consuming; I had little time for other stuff. So I built this. The average time for making a single email was reduced from 50 min to 7 min.",
+			"In a past position, I was tasked with creating a significant number of HTML emails and website updates. While the process of building emails was straightforward, it was also repetitive and time-consuming, leaving me with limited time for other important tasks. To address this challenge, I developed a tool that streamlined the email creation process, resulting in a significant reduction in the average time required to produce a single email. Thanks to this innovative solution, email production time was reduced from 50 minutes to just seven minutes, allowing me to focus on other critical tasks and ultimately improving overall productivity.",
 		stack: ["angular", "regex"],
 		hero: ebHero,
 		thumb: ebThumb,
@@ -86,7 +86,7 @@ export const projects: Project[] = [
 		title: "Suicide in Japan",
 		subtitle: "Data visualization for a Halloween project",
 		description:
-			"Suicide in Japan is an infographic inspired by Japan's high suicide rate. Built with plain HTML and CSS Grid.",
+			'"Suicide in Japan" is a powerful infographic that seeks to raise awareness of Japan\'s high suicide rate. This thought-provoking piece was created using plain HTML and CSS Grid, showcasing the creative potential of these technologies to deliver compelling visual content.',
 		stack: ["cssGrid", "live"],
 		hero: suicideHero,
 		thumb: suicideThumb,
@@ -98,7 +98,7 @@ export const projects: Project[] = [
 		title: "French Formatter",
 		subtitle: "Saves you from French grammar police",
 		description:
-			"French Formatter inserts a non-breaking space (&ngsp;) where French grammar requires. (i.e., 30&ngsp;%) Humans are not good at this type of repetition. Let computers do.",
+			"French Formatter is a powerful tool that automatically inserts non-breaking spaces (&ngsp;) where French grammar requires, such as in instances like 30&ngsp;%. This innovative solution eliminates the need for repetitive manual input, streamlining the formatting process and reducing the potential for human error. By leveraging the power of computers, French Formatter allows for greater accuracy and efficiency, ultimately saving valuable time and resources.",
 		stack: ["vanillajs", "less", "regex"],
 		hero: nonbreakingHero,
 		thumb: nonbreakingThumb,
@@ -110,18 +110,19 @@ export const projects: Project[] = [
 		title: "Global Countdown Timer",
 		subtitle: "Everybody ends at the same time anywhere on earth",
 		description:
-			"Global Countdown Timer lets you quickly implement a countdown widget for your applications. It is battle-tested by one of the major Canadian apparel retailers. It's best for advertising limited-time offers; it displays the same hours regardless of different time zones. It doesn't require API support; stand-alone.",
+			"Global Countdown Timer is a versatile tool that enables developers to easily incorporate a countdown widget into their applications. This reliable solution has been extensively tested and proven successful by a leading Canadian apparel retailer. It is particularly well-suited for advertising time-limited offers, displaying the same hours across all time zones. Global Countdown Timer is a stand-alone solution that does not require API support, making it a simple and accessible choice for developers looking to enhance their applications.",
 		stack: ["vanillajs"],
 		hero: countdownHero,
 		thumb: countdownThumb,
-		url: "https://kdaisho.github.io/Countdown/",
-		githubUrl: "https://github.com/kdaisho/Countdown"
+		url: "https://kdaisho.github.io/global-countdown/",
+		githubUrl: "https://github.com/kdaisho/global-countdown"
 	},
 	{
 		id: 8,
 		title: "Japanese Drum Kit",
 		subtitle: "For fun",
-		description: "A simple fun project. Built with vanilla JavaScript.",
+		description:
+			'"Japanese Drum Kit" is a fun and engaging project that showcases the creative potential of vanilla JavaScript. This simple yet effective tool provides users with an interactive and enjoyable experience, offering a unique insight into the power of programming. By using vanilla JavaScript, this project highlights the impressive capabilities of this foundational technology, providing a solid foundation for more advanced development projects.',
 		stack: ["vanillajs", "live"],
 		hero: drumkitHero,
 		thumb: drumkitThumb,
@@ -133,7 +134,7 @@ export const projects: Project[] = [
 		title: "Archive Everything",
 		subtitle: "Archiving tool using file system",
 		description:
-			"Archive Everything is a documentation tool built with Nodejs and React. It provides a command-line interface to help initial setup. Data is persistent using a local file system, so it's best for a workplace where you handle sensitive information or just for self-documentation.",
+			'"Archive Everything" is a powerful documentation tool that leverages the capabilities of Node.js and React. With a command-line interface to facilitate initial setup, this innovative solution provides users with a reliable and secure means of preserving sensitive information. By utilizing a local file system, Archive Everything ensures that data is persistent and easily accessible, making it an ideal solution for workplace documentation or personal organization.',
 		stack: ["nodejs", "react"],
 		hero: archiveHero,
 		thumb: archiveThumb,
@@ -142,45 +143,55 @@ export const projects: Project[] = [
 	}
 ]
 
-export const filterItems: { name: string; key: string }[] = [
+export const filterItems: { name: string; checked: boolean; key: string }[] = [
 	{
 		name: "Live",
+		checked: false,
 		key: "live"
 	},
 	{
 		name: "VanillaJs",
+		checked: false,
 		key: "vanillajs"
 	},
 	{
 		name: "Nodejs",
+		checked: false,
 		key: "nodejs"
 	},
 	{
+		name: "Svelte",
+		checked: false,
+		key: "svelte"
+	},
+	{
 		name: "React",
+		checked: false,
 		key: "react"
 	},
 	{
 		name: "Angular",
+		checked: false,
 		key: "angular"
 	},
 	{
 		name: "Sass",
+		checked: false,
 		key: "sass"
 	},
 	{
 		name: "Less",
+		checked: false,
 		key: "less"
 	},
 	{
 		name: "Css Grid",
+		checked: false,
 		key: "cssGrid"
 	},
 	{
-		name: "PHP",
-		key: "php"
-	},
-	{
 		name: "mongoDB",
+		checked: false,
 		key: "mongodb"
 	}
 ]

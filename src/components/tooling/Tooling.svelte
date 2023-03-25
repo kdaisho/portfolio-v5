@@ -14,7 +14,13 @@
 
 	const handleFilterChange = (checked: boolean, value: number) => {
 		checked ? filterTerms.delete(value) : filterTerms.add(value)
-		_devIcons = devIcons
+
+		if (!filterTerms.size) {
+			_devIcons = devIcons
+			return
+		}
+
+		_devIcons = devIcons.filter(icon => filterTerms.has(icon.stars))
 	}
 
 	const [send, receive] = crossfade({})
@@ -33,26 +39,23 @@
 			<fieldset class="filter-section" class:active={openPane === "tool"}>
 				<button class="toggle-filter outline-button">Filters</button><legend>(OR) Filters</legend>
 				<div class="filters">
-					{#each filterItems as item}
+					{#each filterItems as { name, checked, stars }}
 						<label
 							class="tag"
-							class:active={filterTerms.has(item.stars)}
+							class:active={filterTerms.has(stars)}
 							on:keydown
-							on:click={() => handleFilterChange(item.checked, item.stars)}
+							on:click={() => handleFilterChange(checked, stars)}
 						>
-							<input type="checkbox" name={item.name} bind:checked={item.checked} />
+							<input type="checkbox" {name} bind:checked />
 							<span class="dummy" />
-							{item.name}
+							{name}
 						</label>
 					{/each}
 				</div>
 			</fieldset>
 		</div>
 		<div class="tooling right-side">
-			{#each _devIcons.filter(icon => {
-				if (!filterTerms.size) return true
-				return filterTerms.has(icon.stars)
-			}) as icon (icon.name)}
+			{#each _devIcons as icon (icon.name)}
 				<div
 					class="tool"
 					in:send={{ key: icon.name }}
@@ -122,14 +125,12 @@
 					}
 
 					.stars {
-						font-size: 12px;
-						letter-spacing: 3px;
 						opacity: 1;
 					}
 
 					.tool-name {
 						color: #fff;
-						transform: translateY(-36px);
+						transform: translateY(-35px);
 					}
 				}
 
@@ -140,15 +141,18 @@
 				.separator {
 					display: block;
 					border-bottom: 2px solid var(--theme-color);
-					margin: 12px auto;
+					margin: 10px auto;
 					transition: transform 0.25s ease-out;
 					width: 30px;
 				}
 
 				.stars {
 					color: #fff;
-					font-size: 0;
+					display: inline-block;
+					font-size: 13px;
+					letter-spacing: 3px;
 					opacity: 0;
+					text-indent: 3px;
 					transition: opacity 0.25s ease-out 0.25s;
 				}
 

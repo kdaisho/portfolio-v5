@@ -6,6 +6,9 @@
 
 	let selectedProject: Project | null
 	let activeCardId: number | null
+	const filterTerms = new Set<string>()
+	let openPane: string
+	let _projects = projects
 
 	const showProject = (project: Project) => {
 		activeCardId = project.id
@@ -16,9 +19,20 @@
 		activeCardId = null
 		selectedProject = null
 	}
+
+	const handleFilterChange = (checked: boolean, value: string) => {
+		checked ? filterTerms.delete(value) : filterTerms.add(value)
+
+		if (!filterTerms.size) {
+			_projects = projects
+			return
+		}
+
+		_projects = projects.filter(project => project.stack.some(st => filterTerms.has(st)))
+	}
 </script>
 
-<section id="toSideProjects" class="section is-projects">
+<section id="toSideProjects" class="section is-projects" class:active={openPane === "projects"}>
 	<div class="content-wrap is-side-by-side">
 		<div class="right-side">
 			<div class="title-group has-filters">
@@ -32,9 +46,14 @@
 				<button class="toggle-filter outline-button">Filters</button>
 				<legend>(AND) Filters</legend>
 				<div class="filters">
-					{#each filterItems as { name, key }}
-						<label class="tag">
-							<input type="checkbox" name={key} />
+					{#each filterItems as { name, checked, key }}
+						<label
+							class="tag"
+							class:active={filterTerms.has(key)}
+							on:keydown
+							on:click={() => handleFilterChange(checked, key)}
+						>
+							<input type="checkbox" name={key} bind:checked />
 							<span class="dummy" />
 							{name}
 						</label>
@@ -43,7 +62,7 @@
 			</fieldset>
 		</div>
 		<div class="cards left-side">
-			{#each projects as project}
+			{#each _projects as project}
 				<div
 					class="card"
 					class:active={activeCardId === project.id}
