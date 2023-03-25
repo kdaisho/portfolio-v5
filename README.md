@@ -1,3 +1,8 @@
+# TODOs (delete when ready to fly)
+
+- Project modal background image is not centered on mobile - ok
+- change casing rule for id - from camel case to kebab-case
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
