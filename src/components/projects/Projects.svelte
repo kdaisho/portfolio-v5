@@ -108,6 +108,7 @@
 						<div class="text-group">
 							<h2 class="title">{selectedProject.title}</h2>
 							<p class="subtitle">{selectedProject.subtitle}</p>
+							<p class="year">Year {selectedProject.year}</p>
 							<p class="description">
 								{selectedProject.description}
 							</p>

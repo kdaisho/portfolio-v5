@@ -12,7 +12,7 @@
 }
 
 .cards {
-	align-items: flex-start;
+	align-items: stretch;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
@@ -25,9 +25,8 @@
 	display: flex;
 	flex-flow: column nowrap;
 	margin: 12px;
-	max-width: 350px;
 	transition: box-shadow 0.05s ease-out 0.15s, transform 0.05s ease-out 0.15s;
-	width: 100%;
+	width: 235px;
 }
 
 .card.active {
@@ -155,7 +154,8 @@
 	font-size: var(--font-lead);
 }
 
-.project-details .text-group .subtitle {
+.project-details .text-group .subtitle,
+.project-details .text-group .year {
 	font-size: var(--font-small);
 	padding-top: 2px;
 }
@@ -246,10 +246,6 @@
 }
 
 @media (min-width: 600px) {
-	.card {
-		width: 235px;
-	}
-
 	.project-details .link {
 		flex: 0 0 48%;
 	}

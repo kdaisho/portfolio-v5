@@ -6,10 +6,9 @@
 <div class="greetings-wrap" class:slide={animation}>
 	<div class="clip-path" />
 	<p class="greetings">
-		Hi, I'm Daisho Komiyama, a software developer based in Montreal with {yearsOfExperience} years of
-		experience. As someone who is obsessed with building for performance, I'm passionate about creating
-		with JavaScript, TypeScript, and Node.js. I take pride in consistently delivering clean and effective
-		code, and I'm excited to see what new challenges lie ahead!
+		I'm Daisho Komiyama, a Montreal-based software developer with {yearsOfExperience} years of experience.
+		Passionate about creating high-performance solutions with JavaScript, TypeScript, and Node.js. I'm
+		committed to delivering clean and effective code, and eager to take on new challenges!
 	</p>
 </div>
 

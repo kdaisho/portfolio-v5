@@ -6,6 +6,7 @@ export type Filters = {
 export type Project = {
 	id: number
 	title: string
+	year: string
 	subtitle: string
 	description: string
 	stack: string[]

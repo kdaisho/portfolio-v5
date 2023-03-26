@@ -63,13 +63,13 @@
 
 	.left-side {
 		align-items: flex-end;
-		flex: 0 0 40%;
+		flex: 0 0 30%;
 	}
 
 	.right-side {
 		background-position: -2px center;
-		flex: 0 0 55%;
-		max-width: 680px;
+		flex: 0 0 65%;
+		max-width: 720px;
 	}
 
 	.sequence {
