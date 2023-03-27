@@ -4,6 +4,14 @@
 	import Hero from "$components/hero/Hero.svelte"
 	import Tooling from "$components/tooling/Tooling.svelte"
 	import Projects from "$components/projects/Projects.svelte"
+	import Contact from "$components/contact/Contact.svelte"
+	import Toast from "$components/toast/Toast.svelte"
+
+	export let form: { success: boolean; msg: string } | null = null
+
+	if (form) {
+		console.log("+page form", form)
+	}
 </script>
 
 <Header />
@@ -11,3 +19,8 @@
 <Work />
 <Tooling />
 <Projects />
+<Contact {form} />
+
+{#if form?.msg}
+	<Toast msg={form.msg} success={form.success} />
+{/if}
