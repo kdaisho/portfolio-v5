@@ -1,0 +1,87 @@
+.left-side {
+	flex: 0 0 100%;
+}
+
+.right-side {
+	flex: 0 0 100%;
+	max-width: 450px;
+	position: relative;
+}
+
+.contact-form {
+	background: #fff;
+	border: 4px solid var(--theme-color);
+	box-shadow: 5px 5px 0 var(--theme-color);
+	flex: 0 0 100%;
+	padding: 15px 12px 20px;
+	transition: box-shadow 0.1s, transform 0.3s ease-out 0.2s, opacity 0s 0.6s;
+}
+
+.form-group {
+	padding: 6px 0;
+}
+
+label {
+	color: var(--theme-color);
+	display: block;
+	padding-bottom: 4px;
+}
+
+.text-input,
+textarea {
+	border: 1px solid var(--theme-color);
+	box-sizing: border-box;
+	font-size: var(--font-medium);
+	width: 100%;
+}
+
+.text-input {
+	height: 30px;
+	padding: 0 5px;
+}
+
+.text-input:focus,
+textarea:focus {
+	outline: 2px solid var(--theme-color);
+}
+
+textarea {
+	padding: 5px;
+}
+
+.button.is-submit {
+	margin: 9px 0 0 0;
+	opacity: 1;
+	transition: opacity 0.15s ease-in;
+	width: 100%;
+}
+
+.button:hover {
+	opacity: 0.8;
+}
+
+.thank-you-note {
+	color: var(--theme-color);
+	font-size: var(--font-large);
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 8%;
+	transform: translateY(50%);
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+	.left-side {
+		flex: 0 0 35%;
+	}
+
+	.right-side {
+		flex: 0 0 360px;
+		padding: 0 0 0 3%;
+	}
+
+	.thank-you-note {
+		left: 30px;
+	}
+}

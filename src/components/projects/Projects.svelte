@@ -97,7 +97,7 @@
 					on:click={event => event.stopPropagation()}
 					on:keypress
 					role="button"
-					tabIndex={0}
+					tabindex="0"
 					in:fly={{ y: 200, duration: 200 }}
 				>
 					<div
