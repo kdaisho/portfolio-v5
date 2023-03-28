@@ -6,6 +6,7 @@
 	flex: 0 0 100%;
 	max-width: 450px;
 	position: relative;
+	min-height: 383px;
 }
 
 .contact-form {
@@ -60,17 +61,6 @@ textarea {
 	opacity: 0.8;
 }
 
-.thank-you-note {
-	color: var(--theme-color);
-	font-size: var(--font-large);
-	left: 0;
-	position: absolute;
-	text-align: center;
-	top: 8%;
-	transform: translateY(50%);
-	width: 100%;
-}
-
 @media (min-width: 600px) {
 	.left-side {
 		flex: 0 0 35%;
@@ -79,9 +69,5 @@ textarea {
 	.right-side {
 		flex: 0 0 360px;
 		padding: 0 0 0 3%;
-	}
-
-	.thank-you-note {
-		left: 30px;
 	}
 }

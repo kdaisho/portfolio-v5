@@ -14,7 +14,7 @@
 </script>
 
 {#if msg}
-	<div in:fly={{ y: 200 }} out:fly={{ y: -200, easing: backOut }} style="--bg-toast: {bg}">
+	<div in:fly={{ y: -200 }} out:fly={{ y: -200, easing: backOut }} style="--bg-toast: {bg}">
 		<p style="color: #fff">{msg}</p>
 	</div>
 {/if}

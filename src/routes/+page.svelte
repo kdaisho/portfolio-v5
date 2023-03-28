@@ -8,10 +8,6 @@
 	import Toast from "$components/toast/Toast.svelte"
 
 	export let form: { success: boolean; msg: string } | null = null
-
-	if (form) {
-		console.log("+page form", form)
-	}
 </script>
 
 <Header />
