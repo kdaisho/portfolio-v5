@@ -1,9 +1,17 @@
 <script lang="ts">
 	import { enhance } from "$app/forms"
-	export let form: { success: boolean; msg: string } | null = null
-	console.log("FORM", form)
+	import { fly } from "svelte/transition"
+	import { circOut } from "svelte/easing"
 
-	let sending = false
+	export let form: { success: boolean; msg: string } | null = null
+
+	let stay = true
+
+	$: {
+		if (form?.success) {
+			stay = false
+		}
+	}
 </script>
 
 <section id="toContact" class="section is-contact">
@@ -18,28 +26,29 @@
 			</p>
 		</div>
 		<div class="right-side">
-			<p class="thank-you-note">
-				{#if form?.success}
-					<span>Done!</span>
-				{:else if sending}
-					<span>Sending...</span>
-				{/if}
-			</p>
-			<form class="contact-form" method="POST" action=".?/send" use:enhance>
-				<div class="form-group">
-					<label for="name">Name</label>
-					<input class="text-input" type="text" name="name" maxlength={45} required />
-				</div>
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input class="text-input" type="email" name="email" maxlength={60} required />
-				</div>
-				<div class="form-group">
-					<label for="message">Message</label>
-					<textarea name="message" rows={6} maxLength={2500} required />
-				</div>
-				<button class="button is-flat is-submit outline-button">Send</button>
-			</form>
+			{#if stay}
+				<form
+					class="contact-form"
+					method="POST"
+					action=".?/send"
+					use:enhance
+					out:fly={{ y: -250, duration: 250, easing: circOut }}
+				>
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input class="text-input" type="text" name="name" maxlength={45} required />
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input class="text-input" type="email" name="email" maxlength={60} required />
+					</div>
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea name="message" rows={6} maxLength={2500} required />
+					</div>
+					<button class="button is-flat is-submit outline-button">Send</button>
+				</form>
+			{/if}
 		</div>
 	</div>
 </section>

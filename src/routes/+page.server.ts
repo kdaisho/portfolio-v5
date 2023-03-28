@@ -42,8 +42,7 @@ export const actions = {
 			await sendEmail({ name, email, message })
 			return { success: true, msg: `Thank you, ${name}!` }
 		} catch (err) {
-			console.error("Yo Error!", err)
-			return fail(400, { success: false, msg: "Something went wrong. Please try again." })
+			return fail(400, { success: false, msg: "Oops, something went wrong." })
 		}
 	}
 }

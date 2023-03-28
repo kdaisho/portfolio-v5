@@ -27,7 +27,7 @@ p {
 
 .root * {
 	::selection {
-		background: var(--themeColor);
+		background: var(--theme-color);
 		color: #fff;
 	}
 }
