@@ -6,6 +6,7 @@
 	import Projects from "$components/projects/Projects.svelte"
 	import Contact from "$components/contact/Contact.svelte"
 	import Toast from "$components/toast/Toast.svelte"
+	import Footer from "$components/footer/Footer.svelte"
 
 	export let form: { success: boolean; msg: string } | null = null
 </script>
@@ -16,6 +17,7 @@
 <Tooling />
 <Projects />
 <Contact {form} />
+<Footer />
 
 {#if form?.msg}
 	<Toast msg={form.msg} success={form.success} />

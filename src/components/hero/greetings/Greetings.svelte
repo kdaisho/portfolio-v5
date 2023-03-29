@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
+	import { getCurrentYear } from "$lib/utils"
 	export let animation = true
-	const yearsOfExperience = new Date().getFullYear() - 2015
+
+	const yearsOfExperience = getCurrentYear() - 2015
 </script>
 
 <div class="greetings-wrap" class:slide={animation}>
