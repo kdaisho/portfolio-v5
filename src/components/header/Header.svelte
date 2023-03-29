@@ -1,7 +1,6 @@
 <script lang="ts">
 	import logo from "$assets/nav/logo.svg"
-	import linkedin from "$assets/nav/linkedin.svg"
-	import github from "$assets/nav/github.svg"
+	import { socialNetworks } from "$lib/data"
 	import menuDots from "$assets/nav/menu-dots.svg"
 	import menuClose from "$assets/nav/menu-close.svg"
 
@@ -21,25 +20,13 @@
 		</div>
 		<div id="navRight" class="nav-right">
 			<ul class="social-links">
-				<li class="social-each">
-					<a
-						href="https://www.linkedin.com/in/daisho-komiyama-6766657a/"
-						title="linkedin"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<img src={linkedin} alt="linkedin" />
-					</a>
-				</li>
-				<li class="social-each">
-					<a
-						href="https://github.com/kdaisho"
-						title="github"
-						target="_blank"
-						rel="noopener noreferrer"
-						><img src={github} alt="github" />
-					</a>
-				</li>
+				{#each socialNetworks as sns}
+					<li class="social-each">
+						<a href={sns.url} title={sns.name} target="_blank" rel="noopener noreferrer">
+							<img src={sns.src} alt={sns.name} />
+						</a>
+					</li>
+				{/each}
 			</ul>
 			<button class="menu-toggle outline-button" on:click={() => console.log("click menu toggler")}>
 				<img src={openPane ? menuClose : menuDots} alt="toggle menu" />
