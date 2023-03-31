@@ -3,6 +3,7 @@
 	import { socialNetworks } from "$lib/data"
 	import menuDots from "$assets/nav/menu-dots.svg"
 	import menuClose from "$assets/nav/menu-close.svg"
+	import { fade } from "svelte/transition"
 
 	let openPane = false
 </script>
@@ -28,20 +29,26 @@
 					</li>
 				{/each}
 			</ul>
-			<button class="menu-toggle outline-button" on:click={() => console.log("click menu toggler")}>
-				<img src={openPane ? menuClose : menuDots} alt="toggle menu" />
+			<button class="menu-toggle outline-button" on:click={() => (openPane = !openPane)}>
+				<img src={openPane ? menuClose : menuDots} alt="{openPane ? 'close' : 'open'} menu" />
 			</button>
-			<div class="menu-pane">
+			<div class="menu-pane" class:active={openPane}>
 				<button class="button has-shadow menu-item">Work Log</button>
 				<button class="button has-shadow menu-item">Tooling</button>
 				<button class="button has-shadow menu-item">Side Projects</button>
 				<button class="button has-shadow menu-item">Contact</button>
-				<div class="theme-button">
-					<button>🌙</button>
-				</div>
 			</div>
 		</div>
 	</div>
 </header>
+
+{#if openPane}
+	<div
+		class="backdrop"
+		transition:fade={{ duration: 350, delay: 100 }}
+		on:click={() => (openPane = !openPane)}
+		on:keypress
+	/>
+{/if}
 
 <style src="./styles.css"></style>

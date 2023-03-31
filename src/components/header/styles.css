@@ -87,27 +87,6 @@ a {
 	width: 32px;
 }
 
-.theme-button {
-	display: flex;
-	height: 60px;
-	justify-content: center;
-}
-
-.theme-button button {
-	border: none;
-	background: none;
-	font-size: 1.5rem;
-	margin-left: 0.5rem;
-}
-
-.theme-button button:is(:focus, :active) {
-	outline: none;
-}
-
-.theme-button button:hover {
-	cursor: pointer;
-}
-
 .menu-pane {
 	background: var(--theme-color);
 	border: 4px solid #2962ff;
@@ -121,6 +100,11 @@ a {
 	width: 100%;
 }
 
+.menu-pane.active {
+	right: 0;
+	z-index: 100;
+}
+
 .menu-pane .menu-item {
 	box-shadow: none;
 	border-width: 0 0 4px 0;
@@ -131,13 +115,20 @@ a {
 	white-space: nowrap;
 }
 
+.backdrop {
+	background: rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(15px);
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 40;
+}
+
 @media (min-width: 769px) {
 	.nav {
 		height: 58px;
-	}
-
-	.theme-button {
-		height: auto;
 	}
 
 	.social-each {
@@ -187,17 +178,6 @@ a {
 		border: 3px solid var(--theme-color-darken);
 		box-shadow: 4px 4px 0 var(--theme-color-darken);
 		color: var(--theme-color-darken);
-		font-size: var(--font-medium);
-		height: 40px;
-		margin: 0 6px;
-		transition: translate 0.05s ease-in box-shadow 0.05s ease-in;
-	}
-
-	.header.dark .nav .nav-right .menu-pane .menu-item {
-		background: var(--theme-color);
-		border: 3px solid #fff;
-		box-shadow: 4px 4px 0 #fff;
-		color: #fff;
 		font-size: var(--font-medium);
 		height: 40px;
 		margin: 0 6px;
