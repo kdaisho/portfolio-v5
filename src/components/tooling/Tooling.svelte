@@ -26,7 +26,7 @@
 	const [send, receive] = crossfade({})
 </script>
 
-<section id="toTooling" class="section is-tooling bright">
+<section id="tooling" class="section is-tooling bright">
 	<div class="content-wrap is-side-by-side">
 		<div class="left-side">
 			<div class="title-group has-filters">

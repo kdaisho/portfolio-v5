@@ -33,10 +33,10 @@
 				<img src={openPane ? menuClose : menuDots} alt="{openPane ? 'close' : 'open'} menu" />
 			</button>
 			<div class="menu-pane" class:active={openPane}>
-				<button class="button has-shadow menu-item">Work Log</button>
-				<button class="button has-shadow menu-item">Tooling</button>
-				<button class="button has-shadow menu-item">Side Projects</button>
-				<button class="button has-shadow menu-item">Contact</button>
+				<a href="#work" class="button has-shadow menu-item">Work Log</a>
+				<a href="#tooling" class="button has-shadow menu-item">Tooling</a>
+				<a href="#side-projects" class="button has-shadow menu-item">Side Projects</a>
+				<a href="#contact" class="button has-shadow menu-item">Contact</a>
 			</div>
 		</div>
 	</div>

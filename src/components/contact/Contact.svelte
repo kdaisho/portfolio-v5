@@ -14,7 +14,7 @@
 	}
 </script>
 
-<section id="toContact" class="section is-contact">
+<section id="contact" class="section is-contact">
 	<div class="content-wrap is-side-by-side">
 		<div class="left-side title-group">
 			<h2 class="title">Contact</h2>

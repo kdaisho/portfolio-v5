@@ -22,3 +22,9 @@
 {#if form?.msg}
 	<Toast msg={form.msg} success={form.success} />
 {/if}
+
+<style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+</style>

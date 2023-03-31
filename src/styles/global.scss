@@ -61,38 +61,6 @@ p {
 		}
 	}
 
-	.dark {
-		&.is-hero {
-			background: #000;
-		}
-		&.section {
-			background: #000;
-			&.is-education,
-			&.is-projects {
-				background: #111;
-			}
-		}
-		.left-side {
-			.typewriter {
-				h1 {
-					color: var(--theme-color);
-				}
-			}
-		}
-		.greetings-wrap {
-			.greetings {
-				color: var(--theme-color);
-				font-weight: bold;
-			}
-		}
-		.title-group {
-			.subtitle {
-				color: var(--theme-color) !important;
-				font-weight: bold;
-			}
-		}
-	}
-
 	.content-wrap {
 		margin: 0 auto;
 		max-width: 1290px;

@@ -34,7 +34,7 @@
 	}
 </script>
 
-<section id="toSideProjects" class="section is-projects" class:active={openPane === "projects"}>
+<section id="side-projects" class="section is-projects" class:active={openPane === "projects"}>
 	<div class="content-wrap is-side-by-side">
 		<div class="right-side">
 			<div class="title-group has-filters">

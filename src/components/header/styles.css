@@ -106,8 +106,10 @@ a {
 }
 
 .menu-pane .menu-item {
+	align-items: center;
 	box-shadow: none;
 	border-width: 0 0 4px 0;
+	display: flex;
 	font-size: 18px;
 	height: 70px;
 	margin: 0;

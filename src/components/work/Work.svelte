@@ -1,4 +1,4 @@
-<section id="toWorkLog" class="section is-education bright">
+<section id="work" class="section is-education bright">
 	<div class="content-wrap is-side-by-side">
 		<div class="title-group">
 			<h2 class="title">Work Log</h2>
