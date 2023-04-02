@@ -20,7 +20,7 @@
 
 <svelte:window bind:innerWidth />
 
-<section id="pageTop" class="is-hero bright">
+<section id="page-top" class="is-hero bright">
 	<div class="content-wrap is-side-by-side">
 		<div class="left-side">
 			<div class="typewriter">

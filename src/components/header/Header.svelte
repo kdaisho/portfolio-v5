@@ -31,9 +31,9 @@
 >
 	<div class="content-wrap nav">
 		<div class="nav-left">
-			<button class="logo"><img src={logo} alt="logo" /></button>
+			<a href="#page-top" class="logo"><img src={logo} alt="logo" /></a>
 		</div>
-		<div id="navRight" class="nav-right">
+		<div class="nav-right">
 			<ul class="social-links">
 				{#each socialNetworks as sns}
 					<li class="social-each">
