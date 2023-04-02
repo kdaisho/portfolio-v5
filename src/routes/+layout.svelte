@@ -31,4 +31,8 @@
 <style lang="scss" global>
 	@import "../styles/reset.scss";
 	@import "../styles/global.scss";
+
+	html {
+		scroll-behavior: smooth;
+	}
 </style>

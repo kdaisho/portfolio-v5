@@ -1,14 +1,22 @@
 <script lang="ts">
-	import { crossfade } from "svelte/transition"
 	import { flip } from "svelte/animate"
 	import { filterItems, devIcons } from "./data"
-	import { FLIP_DURATION } from "$lib/constatns"
+	import { menu } from "$lib/stores"
 
 	const themeColor = "#2962ff"
 	const white = "#fff"
 	const filterTerms = new Set<number>()
-	let openPane: string
 	let _devIcons = devIcons
+	let open = false
+
+	menu.name.subscribe(name => {
+		open = name === "tooling"
+	})
+
+	const toggle = () => {
+		menu.name.update(val => (val === "tooling" ? "" : "tooling"))
+		menu.backdrop.update(val => !val)
+	}
 
 	const getStars = (num: number) => Array(num).fill("★").join("")
 
@@ -22,8 +30,6 @@
 
 		_devIcons = devIcons.filter(icon => filterTerms.has(icon.stars))
 	}
-
-	const [send, receive] = crossfade({})
 </script>
 
 <section id="tooling" class="section is-tooling bright">
@@ -36,8 +42,9 @@
 					pleasure in both writing and reviewing code related to these technologies.
 				</p>
 			</div>
-			<fieldset class="filter-section" class:active={openPane === "tool"}>
-				<button class="toggle-filter outline-button">Filters</button><legend>(OR) Filters</legend>
+			<fieldset class="filter-section" class:active={open}>
+				<button class="toggle-filter outline-button" on:click={toggle}>Filters</button>
+				<legend>(OR) Filters</legend>
 				<div class="filters">
 					{#each filterItems as { name, checked, stars }}
 						<label
@@ -58,9 +65,7 @@
 			{#each _devIcons as icon (icon.name)}
 				<div
 					class="tool"
-					in:send={{ key: icon.name }}
-					out:receive={{ key: icon.name }}
-					animate:flip={{ duration: FLIP_DURATION }}
+					animate:flip={{ duration: 250 }}
 					on:mouseenter={() => (icon.color = white)}
 					on:mouseleave={() => (icon.color = themeColor)}
 				>

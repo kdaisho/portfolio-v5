@@ -1,16 +1,27 @@
 <script lang="ts">
 	import { fly } from "svelte/transition"
+	import { flip } from "svelte/animate"
 	import { filterItems, projects } from "./data"
 	import type { Project } from "$lib/types"
 	import Modal from "../modal/Modal.svelte"
 	import DesktopIcon from "$assets/projects/desktop-icon.svelte"
 	import GithubIcon from "$assets/projects/github-icon.svelte"
+	import { menu } from "$lib/stores"
 
 	let selectedProject: Project | null
 	let activeCardId: number | null
 	const filterTerms = new Set<string>()
-	let openPane: string
 	let _projects = projects
+	let open = false
+
+	menu.name.subscribe(name => {
+		open = name === "projects"
+	})
+
+	const toggle = () => {
+		menu.name.update(val => (val === "projects" ? "" : "projects"))
+		menu.backdrop.update(val => !val)
+	}
 
 	const showProject = (project: Project) => {
 		activeCardId = project.id
@@ -34,7 +45,7 @@
 	}
 </script>
 
-<section id="side-projects" class="section is-projects" class:active={openPane === "projects"}>
+<section id="side-projects" class="section is-projects">
 	<div class="content-wrap is-side-by-side">
 		<div class="right-side">
 			<div class="title-group has-filters">
@@ -44,8 +55,8 @@
 					new technologies outside of my day job is a great way to achieve that.
 				</p>
 			</div>
-			<fieldset class="filter-section">
-				<button class="toggle-filter outline-button">Filters</button>
+			<fieldset class="filter-section" class:active={open}>
+				<button class="toggle-filter outline-button" on:click={toggle}>Filters</button>
 				<legend>(AND) Filters</legend>
 				<div class="filters">
 					{#each filterItems as { name, checked, key }}
@@ -64,10 +75,11 @@
 			</fieldset>
 		</div>
 		<div class="cards left-side">
-			{#each _projects as project}
+			{#each _projects as project (project.id)}
 				<div
 					class="card"
 					class:active={activeCardId === project.id}
+					animate:flip={{ duration: 250 }}
 					on:click={() => showProject(project)}
 					on:keypress
 					role="button"
