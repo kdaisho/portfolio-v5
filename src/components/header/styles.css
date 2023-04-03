@@ -86,10 +86,12 @@ a {
 
 .menu-pane {
 	background: var(--theme-color);
-	border: 4px solid #2962ff;
-	border-width: 0 0 4px 4px;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 6px;
 	height: calc(100vh - 48px);
-	max-width: 250px;
+	max-width: 180px;
+	padding-top: 0.5rem;
 	position: absolute;
 	right: -250px;
 	top: 48px;
@@ -104,12 +106,12 @@ a {
 
 .menu-pane .menu-item {
 	align-items: center;
-	box-shadow: none;
-	border-width: 0 0 4px 0;
+	color: #fff;
 	display: flex;
 	font-size: 18px;
-	height: 70px;
-	margin: 0;
+	justify-content: flex-end;
+	height: 50px;
+	padding-right: 0.75rem;
 	width: 100%;
 	white-space: nowrap;
 }
@@ -153,22 +155,36 @@ a {
 		border: none;
 		display: flex;
 		flex-flow: row nowrap;
-		flex: 0 0 50%;
+		flex: 0 0 450px;
+		gap: 4px;
 		height: auto;
 		justify-content: flex-end;
-		margin-top: -5px;
 		max-width: none;
+		padding-top: 0;
 		position: initial;
 		width: 100%;
 	}
 
 	.menu-pane .menu-item {
-		border: 3px solid var(--theme-color-darken);
-		box-shadow: 4px 4px 0 var(--theme-color-darken);
-		color: var(--theme-color-darken);
+		background: rgba(0, 0, 0, 0.35);
+		height: auto;
+		overflow: hidden;
+		padding-right: 0;
+		width: 125px;
+	}
+
+	.menu-pane .menu-item a {
+		background: #fff;
+		color: var(--theme-color);
+		display: flex;
 		font-size: var(--font-medium);
-		height: 40px;
-		margin: 0 6px;
-		transition: translate 0.05s ease-in box-shadow 0.05s ease-in;
+		font-weight: bold;
+		height: 38px;
+		justify-content: center;
+		transition: transform 0.075s ease-in;
+	}
+
+	.menu-pane a.pressed {
+		transform: translate(6px, 6px);
 	}
 }

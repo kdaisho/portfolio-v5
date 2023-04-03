@@ -1,11 +1,12 @@
 <script lang="ts">
 	import logo from "$assets/nav/logo.svg"
-	import { socialNetworks } from "$lib/data"
+	import { navItems, socialNetworks } from "$lib/data"
 	import menuDots from "$assets/nav/menu-dots.svg"
 	import menuClose from "$assets/nav/menu-close.svg"
 	import { menu } from "$lib/stores"
 
 	let open = false
+	let pressed = ""
 
 	menu.name.subscribe(name => {
 		open = name === "nav"
@@ -16,9 +17,13 @@
 		menu.name.update(val => (val === "nav" ? "" : "nav"))
 	}
 
-	const closeMenu = () => {
+	const closeMenu = (name: string) => {
+		pressed = name
 		menu.backdrop.set(false)
 		menu.name.set("")
+		setTimeout(() => {
+			pressed = ""
+		}, 150)
 	}
 </script>
 
@@ -47,12 +52,16 @@
 				<img src={open ? menuClose : menuDots} alt="{open ? 'close' : 'open'} menu" />
 			</button>
 			<div class="menu-pane" class:active={open}>
-				<a href="#work" class="button has-shadow menu-item" on:click={closeMenu}>Work Log</a>
-				<a href="#tooling" class="button has-shadow menu-item" on:click={closeMenu}>Tooling</a>
-				<a href="#side-projects" class="button has-shadow menu-item" on:click={closeMenu}
-					>Side Projects</a
-				>
-				<a href="#contact" class="button has-shadow menu-item" on:click={closeMenu}>Contact</a>
+				{#each navItems as { name, label }}
+					<span class="menu-item">
+						<a
+							href="#{name}"
+							class="menu-item"
+							class:pressed={pressed === name}
+							on:click={() => closeMenu(name)}>{label}</a
+						>
+					</span>
+				{/each}
 			</div>
 		</div>
 	</div>

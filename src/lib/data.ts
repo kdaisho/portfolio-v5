@@ -13,3 +13,22 @@ export const socialNetworks = [
 		url: "https://github.com/kdaisho"
 	}
 ]
+
+export const navItems = [
+	{
+		name: "work",
+		label: "Work Log"
+	},
+	{
+		name: "tooling",
+		label: "Tooling"
+	},
+	{
+		name: "side-projects",
+		label: "Side Projects"
+	},
+	{
+		name: "contact",
+		label: "Contact"
+	}
+]

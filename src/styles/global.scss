@@ -1,6 +1,5 @@
 :root {
 	--theme-color: #2962ff;
-	--theme-color-darken: #001f76;
 	--theme-color-secondary: #0091ea;
 	--background-color: #f6f6f6;
 	--danger: #ff1744;
@@ -133,10 +132,6 @@ p {
 
 		&:hover {
 			cursor: pointer;
-		}
-
-		&.has-shadow {
-			box-shadow: 4px 4px 0 var(--theme-color);
 		}
 
 		&.is-flat {
