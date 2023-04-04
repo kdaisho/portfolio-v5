@@ -29,8 +29,8 @@
 </div>
 
 <style lang="scss" global>
-	@import "../styles/reset.scss";
-	@import "../styles/global.scss";
+	@import "../styles/reset.css";
+	@import "../styles/global.css";
 
 	html {
 		scroll-behavior: smooth;

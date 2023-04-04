@@ -44,7 +44,7 @@
 			</div>
 			<fieldset class="filter-section" class:active={open}>
 				<button class="toggle-filter outline-button" on:click={toggle}>Filters</button>
-				<legend>(OR) Filters</legend>
+				<legend>Filters</legend>
 				<div class="filters">
 					{#each filterItems as { name, checked, stars }}
 						<label
