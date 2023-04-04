@@ -28,7 +28,7 @@
 	</div>
 </div>
 
-<style lang="scss" global>
+<style global>
 	@import "../styles/reset.css";
 	@import "../styles/global.css";
 

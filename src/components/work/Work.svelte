@@ -20,11 +20,11 @@
 				</div>
 				<div class="side is-back">
 					<div class="list">
-						<p>Doing</p>
+						<p>Do</p>
 						<ul><li>Headless CMS Development</li></ul>
 					</div>
 					<div class="list">
-						<p>Using</p>
+						<p>With</p>
 						<ul>
 							<li>React</li>
 							<li>TypeScript</li>
@@ -49,11 +49,11 @@
 				</div>
 				<div class="side is-back">
 					<div class="list">
-						<p>Building</p>
+						<p>Do</p>
 						<ul><li>Lots of Web Apps</li></ul>
 					</div>
 					<div class="list">
-						<p>Using</p>
+						<p>With</p>
 						<ul>
 							<li>React</li>
 							<li>AngularJS</li>
@@ -78,7 +78,7 @@
 				</div>
 				<div class="side is-back">
 					<div class="list">
-						<p>Doing</p>
+						<p>Do</p>
 						<ul>
 							<li>Enhancement</li>
 							<li>Bug fix</li>
@@ -86,7 +86,7 @@
 						</ul>
 					</div>
 					<div class="list">
-						<p>Using</p>
+						<p>With</p>
 						<ul>
 							<li>AngularJS</li>
 							<li>JavaScript</li>
@@ -110,7 +110,7 @@
 				</div>
 				<div class="side is-back">
 					<div class="list">
-						<p>Doing</p>
+						<p>Do</p>
 						<ul>
 							<li>Markup</li>
 							<li>Style</li>
@@ -119,7 +119,7 @@
 						</ul>
 					</div>
 					<div class="list">
-						<p>Using</p>
+						<p>With</p>
 						<ul>
 							<li>HTML5</li>
 							<li>CSS3</li>
@@ -143,7 +143,7 @@
 				</div>
 				<div class="side is-back">
 					<div class="list">
-						<p>Doing</p>
+						<p>Do</p>
 						<ul>
 							<li>Design</li>
 							<li>Markup</li>
@@ -151,7 +151,7 @@
 						</ul>
 					</div>
 					<div class="list">
-						<p>Using</p>
+						<p>With</p>
 						<ul>
 							<li>HTML5</li>
 							<li>CSS3</li>
@@ -169,4 +169,4 @@
 	</div>
 </section>
 
-<style src="./styles.scss"></style>
+<style src="./styles.css"></style>
