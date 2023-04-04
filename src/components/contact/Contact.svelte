@@ -36,15 +36,22 @@
 				>
 					<div class="form-group">
 						<label for="name">Name</label>
-						<input class="text-input" type="text" name="name" maxlength={45} required />
+						<input id="name" class="text-input" type="text" name="name" maxlength={45} required />
 					</div>
 					<div class="form-group">
 						<label for="email">Email</label>
-						<input class="text-input" type="email" name="email" maxlength={60} required />
+						<input
+							id="email"
+							class="text-input"
+							type="email"
+							name="email"
+							maxlength={60}
+							required
+						/>
 					</div>
 					<div class="form-group">
 						<label for="message">Message</label>
-						<textarea name="message" rows={6} maxLength={2500} required />
+						<textarea id="message" name="message" rows={6} maxLength={2500} required />
 					</div>
 					<button class="button is-flat is-submit outline-button">Send</button>
 				</form>
