@@ -1,0 +1,95 @@
+.left {
+	flex: 0 0 100%;
+}
+
+svg {
+	height: 75px;
+	width: 75px;
+}
+
+.tooling {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.right {
+	flex: 0 0 100%;
+	padding-top: 10px;
+}
+
+.tool {
+	flex: 0 0 50%;
+	height: 165px;
+	text-align: center;
+	padding: 20px;
+}
+
+.tool:hover {
+	background: var(--theme-color);
+	cursor: pointer;
+}
+
+.tool:hover .separator {
+	border-color: #fff;
+	transform: translateY(36px);
+}
+
+.tool:hover .stars {
+	opacity: 1;
+}
+
+.tool:hover .tool-name {
+	color: #fff;
+	transform: translateY(-35px);
+}
+
+svg {
+	width: 75px;
+}
+
+.separator {
+	display: block;
+	border-bottom: 2px solid var(--theme-color);
+	margin: 10px auto;
+	transition: transform 0.25s ease-out;
+	width: 30px;
+}
+
+.stars {
+	color: #fff;
+	display: inline-block;
+	font-size: 13px;
+	letter-spacing: 3px;
+	opacity: 0;
+	text-indent: 3px;
+	transition: opacity 0.25s ease-out 0.25s;
+}
+
+.tool-name {
+	color: var(--theme-color);
+	font-size: var(--font-small);
+	transform: translateY(-20px);
+	transition: transform 0.25s ease-out;
+}
+
+.tool:hover :global(path.white) {
+	fill: var(--theme-color);
+}
+
+@media (min-width: 600px) {
+	.tool {
+		flex: 0 0 20%;
+	}
+}
+
+@media (min-width: 769px) {
+	.left {
+		flex: 0 0 35%;
+	}
+
+	.right {
+		flex: 0 0 65%;
+		padding: 0 0 0 3%;
+	}
+}
