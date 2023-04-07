@@ -2,7 +2,7 @@
 	import { cards } from "./data"
 </script>
 
-<section id="work" class="section is-education bright">
+<section id="work" class="section is-education">
 	<div class="content-wrap is-side-by-side">
 		<div class="title-group">
 			<h2 class="title">Work Log</h2>

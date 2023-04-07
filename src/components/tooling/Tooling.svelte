@@ -32,7 +32,7 @@
 	}
 </script>
 
-<section id="tooling" class="section is-tooling bright">
+<section id="tooling" class="section is-tooling">
 	<div class="content-wrap is-side-by-side">
 		<div class="left">
 			<div class="title-group has-filters">

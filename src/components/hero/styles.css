@@ -19,10 +19,6 @@
 	width: 100%;
 }
 
-.right-side.dark .typewriter h1 {
-	animation: typing 1s 1.75s steps(9, end) forwards, darkBlinkCursor 1s step-end infinite;
-}
-
 .sequence {
 	animation: coding 1.1s steps(12, end) infinite;
 	background-size: cover;
@@ -100,15 +96,5 @@
 	}
 	50% {
 		border-color: #000;
-	}
-}
-
-@keyframes darkBlinkCursor {
-	from,
-	to {
-		border-color: transparent;
-	}
-	50% {
-		border-color: var(--theme-color);
 	}
 }

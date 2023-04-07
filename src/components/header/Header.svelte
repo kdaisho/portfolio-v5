@@ -28,7 +28,7 @@
 </script>
 
 <header
-	class="header bright"
+	class="header"
 	class:high-z-index={open}
 	data-host-location="https://daishodesign.com/"
 	data-host-location-origin="https://daishodesign.com"
