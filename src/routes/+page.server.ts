@@ -19,9 +19,33 @@ const isValidEmail = (email: string) => {
 	return email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
 }
 
+const validateHuman = async (token: string) => {
+	try {
+		const response = await fetch(
+			`https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${token}`,
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				}
+			}
+		)
+		return await response.json()
+	} catch (err) {
+		return { success: false, msg: "Something went wrong." }
+	}
+}
+
 export const actions = {
 	send: async ({ request }) => {
 		const data = await request.formData()
+		const token = data.get("token") as string
+		const isHuman = await validateHuman(token)
+
+		if (!isHuman.success) {
+			return fail(400, { success: false, msg: "You're a bot!" })
+		}
+
 		const name = data.get("name") as string
 		const email = data.get("email") as string
 		const message = data.get("message") as string
