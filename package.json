@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "^1.8.5",
+		"@sveltejs/kit": "^1.15.2",
 		"@types/grecaptcha": "^3.0.4",
 		"postmark": "^3.0.15",
 		"prettier": "^2.6.2",

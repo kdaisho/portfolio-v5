@@ -37,7 +37,7 @@
 			<div class="sns">
 				{#each socialNetworks as sns}
 					<a href={sns.url} title={sns.name} target="_blank" rel="noopener noreferrer">
-						<img src={sns.src} class={sns.name} alt={sns.name} />
+						<img src={sns.src} height="35" width="35" class={sns.name} alt={sns.name} />
 					</a>
 				{/each}
 			</div>

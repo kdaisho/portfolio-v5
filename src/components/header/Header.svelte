@@ -36,14 +36,14 @@
 >
 	<div class="content-wrap nav">
 		<div class="nav-left">
-			<a href="#page-top" class="logo"><img src={logo} alt="logo" /></a>
+			<a href="#page-top" class="logo"><img src={logo} height="44" width="62" alt="logo" /></a>
 		</div>
 		<div class="nav-right">
 			<ul class="social-links">
 				{#each socialNetworks as sns}
 					<li class="social-each">
 						<a href={sns.url} title={sns.name} target="_blank" rel="noopener noreferrer">
-							<img src={sns.src} alt={sns.name} />
+							<img src={sns.src} height="35" width="35" alt={sns.name} />
 						</a>
 					</li>
 				{/each}
