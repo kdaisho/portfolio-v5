@@ -43,7 +43,7 @@ export const actions = {
 		const isHuman = await validateHuman(token)
 
 		if (!isHuman.success) {
-			return fail(400, { success: false, msg: "You're a bot!" })
+			return fail(400, { success: false, msg: isHuman.msg ?? "You're a bot!" })
 		}
 
 		const name = data.get("name") as string
