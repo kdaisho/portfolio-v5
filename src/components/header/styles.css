@@ -65,6 +65,7 @@ a {
 }
 
 .social-links img {
+	height: 28px;
 	width: 28px;
 }
 
@@ -123,6 +124,11 @@ a {
 
 	.social-each {
 		height: 35px;
+	}
+
+	.social-links img {
+		height: 35px;
+		width: 35px;
 	}
 
 	.menu-toggle {

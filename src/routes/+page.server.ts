@@ -2,6 +2,12 @@ import { fail } from "@sveltejs/kit"
 import { ServerClient } from "postmark"
 import { MAIL_DESTINATION, POSTMARK_API_TOKEN, RECAPTCHA_SECRET_KEY } from "$env/static/private"
 
+import type { PageServerLoad } from "./$types"
+
+export const load = (({ cookies }) => {
+	cookies.set("SameSite", "Lax")
+}) satisfies PageServerLoad
+
 const mailClient = new ServerClient(POSTMARK_API_TOKEN)
 
 const sendEmail = async (data: { name: string; email: string; message: string }) => {
