@@ -2,16 +2,29 @@
 	import { enhance } from "$app/forms"
 	import { fly } from "svelte/transition"
 	import { circOut } from "svelte/easing"
+	import { onMount } from "svelte"
 
 	export let form: { success: boolean; msg: string } | null = null
 
 	let stay = true
-
 	$: {
 		if (form?.success) {
 			stay = false
 		}
 	}
+
+	let token = ""
+	onMount(() => {
+		if (!grecaptcha) return
+
+		grecaptcha.ready(() => {
+			grecaptcha
+				.execute("6LeXi2slAAAAAKiqg4QBRJNbDRtqqcMNwS95pHjC", { action: "submit" })
+				.then((_token: string) => {
+					token = _token
+				})
+		})
+	})
 </script>
 
 <section id="contact" class="section is-contact">
@@ -53,6 +66,7 @@
 						<label for="message">Message</label>
 						<textarea id="message" name="message" rows={6} maxLength={2500} required />
 					</div>
+					<input type="hidden" value={token} name="token" />
 					<button class="button is-flat is-submit outline-button">Send</button>
 				</form>
 			{/if}
