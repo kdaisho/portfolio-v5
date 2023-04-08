@@ -49,7 +49,12 @@
 				{/each}
 			</ul>
 			<button class="menu-toggle outline-button" on:click={toggleMenu}>
-				<img src={open ? menuClose : menuDots} alt="{open ? 'close' : 'open'} menu" />
+				<img
+					src={open ? menuClose : menuDots}
+					alt="{open ? 'close' : 'open'} menu"
+					height="32"
+					width="32"
+				/>
 			</button>
 			<div class="menu-pane" class:active={open}>
 				{#each navItems as { name, label }}

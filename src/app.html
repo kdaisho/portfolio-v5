@@ -7,11 +7,19 @@
 		<title>Daisho | SDE</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+			as="style"
+			onload="this.onload=null; this.rel='stylesheet'"
+		/>
+		<script
+			src="https://www.google.com/recaptcha/api.js?render=6LeXi2slAAAAAKiqg4QBRJNbDRtqqcMNwS95pHjC"
+			defer
+		></script>
 		%sveltekit.head%
 	</head>
 	<body>
 		<div>%sveltekit.body%</div>
-		<script src="https://www.google.com/recaptcha/api.js?render=6LeXi2slAAAAAKiqg4QBRJNbDRtqqcMNwS95pHjC"></script>
 	</body>
 </html>
