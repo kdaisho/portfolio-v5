@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"start": "ORIGIN=http://localhost:8890 PORT=8890 node build",
+		"prod": "ORIGIN=https://daishodesign.com PORT=8890 node build",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -13,14 +13,12 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-node": "^1.2.3",
 		"@sveltejs/kit": "^1.15.2",
 		"@types/grecaptcha": "^3.0.4",
 		"postmark": "^3.0.15",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
-		"sass": "^1.55.0",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.6",

@@ -24,14 +24,22 @@ Once you've created a project and installed dependencies with `npm install` (or 
 
 ### Important
 
+#### 1. Set ORIGIN
+
 Include ORIGIN otherwise SvelteKit frontend can't communicate with its backend. I add it to a npm script.
 
 ```json
+// For local development
 "start": "ORIGIN=http://localhost:8890 PORT=8890 node build",
+
+// For production
+"prod": "ORIGIN=https://daishodesign.com PORT=8890 node build",
 ```
 
 - `ORIGIN=http://localhost:8890` specifies the origin of the backend server.
 - `PORT=8890` specifies the port of the backend server.
+
+#### 2. Set ORIGIN
 
 ```bash
 npm run dev
