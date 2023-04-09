@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"start": "ORIGIN=http://localhost:8890 PORT=8890 node build",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -13,6 +14,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-node": "^1.2.3",
 		"@sveltejs/kit": "^1.15.2",
 		"@types/grecaptcha": "^3.0.4",
 		"postmark": "^3.0.15",

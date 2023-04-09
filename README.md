@@ -22,6 +22,17 @@ To see TODOs, go to project board: https://github.com/users/kdaisho/projects/2/v
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
+### Important
+
+Include ORIGIN otherwise SvelteKit frontend can't communicate with its backend. I add it to a npm script.
+
+```json
+"start": "ORIGIN=http://localhost:8890 PORT=8890 node build",
+```
+
+- `ORIGIN=http://localhost:8890` specifies the origin of the backend server.
+- `PORT=8890` specifies the port of the backend server.
+
 ```bash
 npm run dev
 
