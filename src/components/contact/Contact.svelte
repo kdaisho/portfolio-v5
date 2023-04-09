@@ -6,28 +6,51 @@
 
 	export let form: { success: boolean; msg: string } | null = null
 
+	const recaptchaSiteKey = "6LeXi2slAAAAAKiqg4QBRJNbDRtqqcMNwS95pHjC"
+	let inView = false
 	let stay = true
+	let token = ""
+
 	$: {
 		if (form?.success) {
 			stay = false
 		}
+
+		if (inView) {
+			const script = document.createElement("script")
+			script.setAttribute(
+				"src",
+				"https://www.google.com/recaptcha/api.js?render=" + recaptchaSiteKey
+			)
+			document.body.appendChild(script)
+
+			script.onload = () => {
+				grecaptcha.ready(() => {
+					grecaptcha.execute(recaptchaSiteKey, { action: "submit" }).then((_token: string) => {
+						token = _token
+					})
+				})
+			}
+		}
 	}
 
-	let token = ""
-	onMount(() => {
-		if (!grecaptcha) return
-
-		grecaptcha.ready(() => {
-			grecaptcha
-				.execute("6LeXi2slAAAAAKiqg4QBRJNbDRtqqcMNwS95pHjC", { action: "submit" })
-				.then((_token: string) => {
-					token = _token
-				})
+	const callback = (entries: IntersectionObserverEntry[]) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				inView = true
+			}
 		})
+	}
+
+	let ref: HTMLElement
+
+	onMount(() => {
+		const observer = new IntersectionObserver(callback)
+		observer.observe(ref)
 	})
 </script>
 
-<section id="contact" class="section is-contact">
+<section id="contact" class="section is-contact" bind:this={ref}>
 	<div class="content-wrap is-side-by-side">
 		<div class="left-side title-group">
 			<h2 class="title">Contact</h2>

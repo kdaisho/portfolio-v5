@@ -18,7 +18,6 @@
 		content="https://res.cloudinary.com/de9x7yfyb/image/upload/v1644639143/daishodesign/highlights-en_t6d8r3.jpg"
 	/>
 	<meta property="og:image:width" content="400" />
-	<title>Daisho | Software Developer</title>
 	<link rel="canonical" href="https://daishodesign.com/" />
 </svelte:head>
 
