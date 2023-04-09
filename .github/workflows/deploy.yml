@@ -42,6 +42,9 @@ jobs:
           cat .env
       - run: npm run build
       - run: cp -r build/. /var/www/daishodesign/
-      # Below: pm2 start npm --name {appName} -- run {script name}
+
+      # pm2 start npm --name {appName} -- run {script name} - when you start pm2 for the first time
       - run: pm2 start npm --name portfolio_v5 -- run prod --watch
-      # - run: pm2 restart portfolio_v5 # for continuous deployment
+
+      # for continuous deployment
+      # - run: pm2 restart portfolio_v5
