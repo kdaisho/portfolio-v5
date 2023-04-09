@@ -41,7 +41,7 @@ jobs:
           echo RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }} >> .env
           cat .env
       - run: npm run build
-      - run: cp -r build /var/www/daishodesign/
+      - run: cp -r build/. /var/www/daishodesign/
       # Below: pm2 start npm --name {appName} -- run {script name}
-      - run: pm2 start npm --name portfolio_v5 -- run start
+      - run: pm2 start npm --name portfolio_v5 -- run start --watch
       # - run: pm2 restart portfolio_v5 # for continuous deployment
