@@ -44,7 +44,5 @@ jobs:
       - run: cp -r build/. /var/www/daishodesign/
 
       # pm2 start npm --name {appName} -- run {script name} - when you start pm2 for the first time
+      - run: pm2 stop portfolio_v5
       - run: pm2 start npm --name portfolio_v5 -- run prod --watch
-
-      # for continuous deployment
-      # - run: pm2 restart portfolio_v5

@@ -1,4 +1,6 @@
 .header {
+	--nav-height: 52px;
+
 	background: var(--theme-color);
 	left: 0;
 	position: fixed;
@@ -15,7 +17,7 @@
 	align-items: center;
 	display: flex;
 	flex-flow: row nowrap;
-	height: 48px;
+	height: var(--nav-height);
 	justify-content: space-between;
 	padding: 0 6px;
 }
@@ -90,12 +92,12 @@ a {
 	display: flex;
 	flex-flow: column nowrap;
 	gap: 6px;
-	height: calc(100vh - 48px);
+	height: calc(100vh - var(--nav-height));
 	max-width: 180px;
 	padding-top: 0.5rem;
 	position: absolute;
 	right: -250px;
-	top: 48px;
+	top: var(--nav-height);
 	transition: right 0.15s ease-out;
 	width: 100%;
 }
