@@ -27,8 +27,8 @@
 				<h1>Who am I?</h1>
 			</div>
 		</div>
-		<div class="right-side" style={`background-image: url(${catBody})`}>
-			<div class="sequence" style={`background: url(${catActions}) 0 0 no-repeat`} />
+		<div class="right-side" style="background-image: url({catBody})">
+			<div class="sequence" style="background: url({catActions}) 0 0 no-repeat" />
 			{#if innerWidth >= 769}
 				<Greetings {animation} />
 			{/if}

@@ -139,7 +139,7 @@
 								{#if selectedProject.githubUrl}
 									<a
 										href={selectedProject.githubUrl}
-										title={`${selectedProject.title} github repository`}
+										title="{selectedProject.title} github repository"
 										class="link is-github-icon"
 										target="_blank"
 										rel="noopener noreferrer"

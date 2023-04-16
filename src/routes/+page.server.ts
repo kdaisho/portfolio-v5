@@ -57,7 +57,7 @@ export const actions = {
 		const message = data.get("message") as string
 
 		if (!name) {
-			return fail(400, { success: false, name })
+			return fail(400, { success: false, msg: "Name is required." })
 		}
 
 		if (!email || !isValidEmail(email)) {
