@@ -4,6 +4,8 @@
 	import catBody from "$assets/hero/cat-body.svg"
 	import catActions from "$assets/hero/cat-actions.svg"
 
+	const preloadImageUrls = [catBody, catActions]
+
 	let animation = true
 	let innerWidth = 0
 
@@ -17,6 +19,12 @@
 
 	onDestroy(() => clearInterval(timeoutId))
 </script>
+
+<svelte:head>
+	{#each preloadImageUrls as image}
+		<link rel="preload" as="image" href={image} />
+	{/each}
+</svelte:head>
 
 <svelte:window bind:innerWidth />
 
