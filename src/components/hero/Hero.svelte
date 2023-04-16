@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { onDestroy, onMount } from "svelte"
 	import Greetings from "./greetings/Greetings.svelte"
-	import catBody from "$assets/hero/cat-body.svg"
+	import CatBody from "$assets/hero/cat-body.svelte"
 	import catActions from "$assets/hero/cat-actions.svg"
-
-	const preloadImageUrls = [catBody, catActions]
 
 	let animation = true
 	let innerWidth = 0
@@ -21,9 +19,7 @@
 </script>
 
 <svelte:head>
-	{#each preloadImageUrls as image}
-		<link rel="preload" as="image" href={image} />
-	{/each}
+	<link rel="preload" as="image" href={catActions} />
 </svelte:head>
 
 <svelte:window bind:innerWidth />
@@ -35,7 +31,8 @@
 				<h1>Who am I?</h1>
 			</div>
 		</div>
-		<div class="right-side" style="background-image: url({catBody})">
+		<div class="right-side">
+			<CatBody />
 			<div class="sequence" style="background: url({catActions}) 0 0 no-repeat" />
 			{#if innerWidth >= 769}
 				<Greetings {animation} />
