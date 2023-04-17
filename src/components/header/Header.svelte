@@ -34,7 +34,7 @@
 	data-host-location-origin="https://daishodesign.com"
 	data-current-location="https://daishodesign.com/"
 >
-	<div class="content-wrap nav">
+	<nav class="content-wrap nav">
 		<div class="nav-left">
 			<a href="#page-top" class="logo"><img src={logo} height="44" width="62" alt="logo" /></a>
 		</div>
@@ -56,20 +56,17 @@
 					width="32"
 				/>
 			</button>
-			<div class="menu-pane" class:active={open}>
+			<ul class="menu-pane" class:active={open}>
 				{#each navItems as { name, label }}
-					<span class="menu-item">
-						<a
-							href="#{name}"
-							class="menu-item"
-							class:pressed={pressed === name}
-							on:click={() => closeMenu(name)}>{label}</a
+					<li class="menu-item">
+						<a href="#{name}" class:pressed={pressed === name} on:click={() => closeMenu(name)}
+							>{label}</a
 						>
-					</span>
+					</li>
 				{/each}
-			</div>
+			</ul>
 		</div>
-	</div>
+	</nav>
 </header>
 
 <style src="./styles.css"></style>

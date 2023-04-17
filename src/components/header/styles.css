@@ -119,6 +119,10 @@ a {
 	white-space: nowrap;
 }
 
+.menu-item a {
+	color: #fff;
+}
+
 @media (min-width: 769px) {
 	.nav {
 		height: 58px;
@@ -181,7 +185,8 @@ a {
 		width: 125px;
 	}
 
-	.menu-pane .menu-item a {
+	.menu-pane a {
+		align-items: center;
 		background: #fff;
 		color: var(--theme-color);
 		display: flex;
@@ -190,6 +195,7 @@ a {
 		height: 38px;
 		justify-content: center;
 		transition: transform 0.075s ease-in;
+		width: 100%;
 	}
 
 	.menu-pane a.pressed {
