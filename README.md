@@ -59,3 +59,10 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Starting the process manually via SSH
+
+When you start a node.js process manually.
+
+- Go to where the project files are located. It is under `./actions-runner-portfolio-v5/...`
+- Start PM2 process: `pm2 start npm --name portfolio_v5 -- run prod --watch`
