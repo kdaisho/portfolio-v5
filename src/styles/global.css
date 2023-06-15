@@ -45,6 +45,7 @@ textarea {
 }
 
 .component-wrap {
+	container-type: inline-size;
 	overflow: hidden;
 	position: relative;
 }
