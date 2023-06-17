@@ -13,7 +13,7 @@ import mybraillerHero from "$assets/projects/mybrailler-hero.jpg"
 import mybraillerThumb from "$assets/projects/mybrailler-thumb.jpg"
 import nonbreakingHero from "$assets/projects/nonbreaking-hero.jpg"
 import nonbreakingThumb from "$assets/projects/nonbreaking-thumb.jpg"
-import portfolioHero from "$assets/projects/portfolio-hero.jpg"
+import portfolioHero from "$assets/projects/portfolio-hero.webp"
 import portfolioThumb from "$assets/projects/portfolio-thumb.webp"
 import qc3Hero from "$assets/projects/qc3-hero.jpg"
 import qc3Thumb from "$assets/projects/qc3-thumb.jpg"
@@ -40,7 +40,7 @@ export const projects: Project[] = [
 		subtitle: "Crafting modern web experiences with SvelteKit",
 		year: "2015 - Present",
 		description:
-			"My portfolio website is an impressive display of my capabilities as a skilled professional, designed to showcase my talents and experience. It is built using SvelteKit, an advanced framework that provides exceptional speed, performance, and flexibility.",
+			"My portfolio website, built using SvelteKit, offers exceptional performance. It has achieved a perfect 100 full score for both desktop and mobile versions according to Lighthouse. Enjoy a seamless browsing experience with fast-loading pages on any device.",
 		stack: ["svelte", "nodejs", "live"],
 		hero: portfolioHero,
 		thumb: portfolioThumb,

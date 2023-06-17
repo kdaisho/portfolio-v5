@@ -123,7 +123,7 @@ a {
 	color: #fff;
 }
 
-@container (min-width: 769px) {
+@media (min-width: 769px) {
 	.nav {
 		height: 58px;
 	}
