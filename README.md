@@ -1,68 +1,55 @@
-# create-svelte
+# Portfolio V5
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+My portfolio website, built using SvelteKit, offers exceptional performance. Visit at [https://daishodesign.com](https://daishodesign.com).
 
-## Creating a project
+## Project Overview
 
-If you're seeing this, you've probably already done this step. Congrats!
+To review the project overview, please visit the project board at: [https://github.com/users/kdaisho/projects/2/views/1](https://github.com/users/kdaisho/projects/2/views/1)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Development
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+To get started with development, follow these steps:
 
-### Project manager
-
-To see TODOs, go to project board: https://github.com/users/kdaisho/projects/2/views/1
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-### Important
-
-#### 1. Set ORIGIN
-
-Include ORIGIN otherwise SvelteKit frontend can't communicate with its backend. I add it to a npm script.
-
-```json
-// For local development
-"start": "ORIGIN=http://localhost:8890 PORT=8890 node build",
-
-// For production
-"prod": "ORIGIN=https://daishodesign.com PORT=8890 node build",
-```
-
-- `ORIGIN=http://localhost:8890` specifies the origin of the backend server.
-- `PORT=8890` specifies the port of the backend server.
-
-#### 2. Set ORIGIN
+1. Clone the project repository.
+2. Install dependencies using `npm install` (or `pnpm install` or `yarn`).
+3. Start a development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Build
 
-To create a production version of your app:
+To create a production version of your app, run the following command:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build using `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Deployment
 
-## Starting the process manually via SSH
+### Setting the ORIGIN
 
-When you start a node.js process manually.
+Ensure that you include the ORIGIN environment variable; otherwise, the SvelteKit frontend won't be able to communicate with its backend. You can add it to an npm script as shown below:
 
-- Go to where the project files are located. It is under `./actions-runner-portfolio-v5/...`
-- Start PM2 process: `pm2 start npm --name portfolio_v5 -- run prod --watch`
+```json
+"prod": "ORIGIN=https://daishodesign.com PORT=8890 node build",
+```
+
+In the above script, PORT=8890 specifies the port of the backend server.
+
+> Note: To deploy your app, you may need to install an adapter suitable for your target environment.
+
+### Manual Application Server Startup
+
+If you bypass GitHub actions and start the application server manually, follow these steps:
+
+- Log in to the server.
+- Navigate to the location of the project files (e.g., ./actions-runner-portfolio-v5/...).
+- Start PM2:
+
+```bash
+pm2 start npm --name portfolio_v5 -- run prod --watch
+```
