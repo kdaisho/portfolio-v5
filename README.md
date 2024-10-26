@@ -51,5 +51,5 @@ If you bypass GitHub actions and start the application server manually, follow t
 - Start PM2:
 
 ```bash
-pm2 start npm --name portfolio_v5 -- run prod --watch
+pm2 start npm --name portfolio_v5 -- run prod
 ```
