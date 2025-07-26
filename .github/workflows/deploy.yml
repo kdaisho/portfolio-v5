@@ -46,3 +46,6 @@ jobs:
       # pm2 start npm --name {appName} -- run {script name} - when you start pm2 for the first time
       - run: pm2 delete portfolio_v5
       - run: pm2 start npm --name portfolio_v5 -- run prod
+      # Below can be used for either initial run (start) or restarting exisiting pm2 process. (haven't tried yet though)
+      # - run: pm2 restart portfolio_v5 || pm2 start npm --name portfolio_v5 -- run start (of `prod`? in my case)
+
